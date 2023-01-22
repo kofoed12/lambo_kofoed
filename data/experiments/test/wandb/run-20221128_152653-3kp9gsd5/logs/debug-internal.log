@@ -1,0 +1,27 @@
+2022-11-28 15:26:53,842 INFO    MainThread:9569 [internal.py:wandb_internal():88] W&B internal server running at pid: 9569, started at: 2022-11-28 15:26:53.842700
+2022-11-28 15:26:53,846 INFO    WriterThread:9569 [datastore.py:open_for_write():77] open: /Users/kofoed/Documents/repos/lambo_kofoed/data/experiments/test/wandb/run-20221128_152653-3kp9gsd5/run-3kp9gsd5.wandb
+2022-11-28 15:26:53,848 DEBUG   HandlerThread:9569 [handler.py:handle_request():121] handle_request: check_version
+2022-11-28 15:26:53,850 DEBUG   SenderThread:9569 [sender.py:send():173] send: header
+2022-11-28 15:26:53,850 DEBUG   SenderThread:9569 [sender.py:send_request():183] send_request: check_version
+2022-11-28 15:26:53,959 DEBUG   SenderThread:9569 [sender.py:send():173] send: run
+2022-11-28 15:26:54,262 INFO    SenderThread:9569 [sender.py:_start_run_threads():678] run started: 3kp9gsd5 with start time 1669645613
+2022-11-28 15:26:54,262 DEBUG   SenderThread:9569 [sender.py:send():173] send: summary
+2022-11-28 15:26:54,262 INFO    SenderThread:9569 [sender.py:_save_file():808] saving file wandb-summary.json with policy end
+2022-11-28 15:26:54,263 DEBUG   HandlerThread:9569 [handler.py:handle_request():121] handle_request: run_start
+2022-11-28 15:26:57,524 WARNING MainThread:9569 [internal.py:wandb_internal():146] Internal process interrupt: 1
+2022-11-28 15:26:57,588 DEBUG   HandlerThread:9569 [meta.py:__init__():39] meta init
+2022-11-28 15:26:57,588 DEBUG   HandlerThread:9569 [meta.py:__init__():53] meta init done
+2022-11-28 15:26:57,588 DEBUG   HandlerThread:9569 [meta.py:probe():210] probe
+2022-11-28 15:26:57,590 DEBUG   HandlerThread:9569 [meta.py:_setup_git():200] setup git
+2022-11-28 15:26:57,664 DEBUG   HandlerThread:9569 [meta.py:_setup_git():207] setup git done
+2022-11-28 15:26:57,665 DEBUG   HandlerThread:9569 [meta.py:_save_pip():57] save pip
+2022-11-28 15:26:57,665 DEBUG   HandlerThread:9569 [meta.py:_save_pip():71] save pip done
+2022-11-28 15:26:57,665 DEBUG   HandlerThread:9569 [meta.py:_save_conda():78] save conda
+2022-11-28 15:26:58,377 WARNING MainThread:9569 [internal.py:wandb_internal():146] Internal process interrupt: 2
+2022-11-28 15:26:58,378 ERROR   MainThread:9569 [internal.py:wandb_internal():149] Internal process interrupted.
+2022-11-28 15:26:58,400 DEBUG   HandlerThread:9569 [meta.py:_save_conda():86] save conda done
+2022-11-28 15:26:58,400 DEBUG   HandlerThread:9569 [meta.py:probe():252] probe done
+2022-11-28 15:26:58,403 INFO    HandlerThread:9569 [handler.py:finish():629] shutting down handler
+2022-11-28 15:26:58,637 INFO    WriterThread:9569 [datastore.py:close():258] close: /Users/kofoed/Documents/repos/lambo_kofoed/data/experiments/test/wandb/run-20221128_152653-3kp9gsd5/run-3kp9gsd5.wandb
+2022-11-28 15:26:58,638 INFO    SenderThread:9569 [sender.py:finish():912] shutting down sender
+2022-11-28 15:26:59,837 INFO    MainThread:9569 [internal.py:handle_exit():78] Internal process exited

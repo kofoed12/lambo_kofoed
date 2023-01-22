@@ -1,3 +1,4 @@
+from typing import Optional
 from numpy import array, copy, concatenate
 from torch import Tensor
 from botorch.acquisition.multi_objective.monte_carlo import (
@@ -70,7 +71,7 @@ class qDiscreteNEHVI(qNoisyExpectedHypervolumeImprovement):
             baseline_X = self._X_baseline
             baseline_X = baseline_X.expand(*X.shape[:-2], -1, -1)
             X_full = torch.cat([baseline_X, X], dim=-2)
-        else:
+        else: # When sequence
             baseline_X = copy(self.X_baseline_string) # ensure contiguity
             baseline_X.resize(
                 baseline_X.shape[:-(X.ndim)] + X.shape[:-1] + baseline_X.shape[-1:]
@@ -85,7 +86,7 @@ class qDiscreteNEHVI(qNoisyExpectedHypervolumeImprovement):
         self._set_sampler(q=q, posterior=posterior)
         samples = self.sampler(posterior)[..., -q:, :]
         # add previous nehvi from pending points
-        return self._compute_qehvi(samples=samples) + self._prev_nehvi
+        return self._my_compute_qehvi(samples=samples) + self._prev_nehvi
     
     def _cache_root_decomposition(self, posterior: GPyTorchPosterior) -> None:
         if posterior.mvn._interleaved:
@@ -97,6 +98,67 @@ class qDiscreteNEHVI(qNoisyExpectedHypervolumeImprovement):
             new_lazy_covariance = BlockDiagLazyTensor(posterior_lc_base)
             posterior.mvn = MultitaskMultivariateNormal(posterior.mvn.mean, new_lazy_covariance, interleaved=False)
         return super()._cache_root_decomposition(posterior=posterior)
+#
+    def _my_compute_qehvi(self, samples: Tensor, X: Optional[Tensor] = None) -> Tensor:
+        obj = self.objective(samples, X=X)
+        q = obj.shape[-2]
+        batch_shape = obj.shape[:-2]
+        # this is n_samples x input_batch_shape x
+        areas_per_segment = torch.zeros(
+            *batch_shape,
+            self.cell_lower_bounds.shape[-2],
+            dtype=obj.dtype,
+            device=obj.device,
+        )
+        cell_batch_ndim = self.cell_lower_bounds.ndim - 2
+        sample_batch_view_shape = torch.Size(
+            [
+                batch_shape[0] if cell_batch_ndim > 0 else 1,
+                *[1 for _ in range(len(batch_shape) - max(cell_batch_ndim, 1))],
+                *self.cell_lower_bounds.shape[1:-2],
+            ]
+        )
+        view_shape = (
+            *sample_batch_view_shape,
+            self.cell_upper_bounds.shape[-2],
+            1,
+            self.cell_upper_bounds.shape[-1],
+        )
+        for i in range(1, self.q + 1):
+            # TODO: we could use batches to compute (q choose i) and (q choose q-i)
+            # simultaneously since subsets of size i and q-i have the same number of
+            # elements. This would decrease the number of iterations, but increase
+            # memory usage.
+            q_choose_i = self.q_subset_indices[f"q_choose_{i}"]
+            # this tensor is mc_samples x batch_shape x i x q_choose_i x m
+            obj_subsets = obj.index_select(dim=-2, index=q_choose_i.view(-1))
+            obj_subsets = obj_subsets.view(
+                obj.shape[:-2] + q_choose_i.shape + obj.shape[-1:]
+            )
+            # since all hyperrectangles share one vertex, the opposite vertex of the
+            # overlap is given by the component-wise minimum.
+            # take the minimum in each subset
+            overlap_vertices = obj_subsets.min(dim=-2).values
+            # add batch-dim to compute area for each segment (pseudo-pareto-vertex)
+            # this tensor is mc_samples x batch_shape x num_cells x q_choose_i x m
+            overlap_vertices = torch.min(
+                overlap_vertices.unsqueeze(-3), self.cell_upper_bounds.view(view_shape)
+            )
+            # substract cell lower bounds, clamp min at zero
+            lengths_i = (
+                overlap_vertices - self.cell_lower_bounds.view(view_shape)
+            ).clamp_min(0.0)
+            # take product over hyperrectangle side lengths to compute area
+            # sum over all subsets of size i
+            areas_i = lengths_i.prod(dim=-1)
+            # if constraints are present, apply a differentiable approximation of
+            # the indicator function
+            areas_i = areas_i.sum(dim=-1)
+            # Using the inclusion-exclusion principle, set the sign to be positive
+            # for subsets of odd sizes and negative for subsets of even size
+            areas_per_segment += (-1) ** (i + 1) * areas_i
+        # sum over segments and average over MC samples
+        return areas_per_segment.sum(dim=-1).mean(dim=0)
     
     
 class qMTGPDiscreteNEHVI(qDiscreteNEHVI):

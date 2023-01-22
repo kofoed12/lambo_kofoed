@@ -1,0 +1,1 @@
+latest loss tensor(200., grad_fn=<MseLossBackward0>)

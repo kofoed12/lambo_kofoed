@@ -1,0 +1,54 @@
+2022-12-30 15:47:08,863 INFO    MainThread:67855 [internal.py:wandb_internal():88] W&B internal server running at pid: 67855, started at: 2022-12-30 15:47:08.862853
+2022-12-30 15:47:08,865 DEBUG   HandlerThread:67855 [handler.py:handle_request():121] handle_request: check_version
+2022-12-30 15:47:08,865 INFO    WriterThread:67855 [datastore.py:open_for_write():77] open: /Users/kofoed/Documents/repos/lambo_kofoed/data/experiments/test/wandb/run-20221230_154708-2v8jzhha/run-2v8jzhha.wandb
+2022-12-30 15:47:08,866 DEBUG   SenderThread:67855 [sender.py:send():173] send: header
+2022-12-30 15:47:08,866 DEBUG   SenderThread:67855 [sender.py:send_request():183] send_request: check_version
+2022-12-30 15:47:08,972 DEBUG   SenderThread:67855 [sender.py:send():173] send: run
+2022-12-30 15:47:09,294 INFO    SenderThread:67855 [sender.py:_start_run_threads():678] run started: 2v8jzhha with start time 1672411628
+2022-12-30 15:47:09,296 DEBUG   SenderThread:67855 [sender.py:send():173] send: summary
+2022-12-30 15:47:09,296 INFO    SenderThread:67855 [sender.py:_save_file():808] saving file wandb-summary.json with policy end
+2022-12-30 15:47:09,297 DEBUG   HandlerThread:67855 [handler.py:handle_request():121] handle_request: run_start
+2022-12-30 15:47:12,435 DEBUG   HandlerThread:67855 [meta.py:__init__():39] meta init
+2022-12-30 15:47:12,435 DEBUG   HandlerThread:67855 [meta.py:__init__():53] meta init done
+2022-12-30 15:47:12,435 DEBUG   HandlerThread:67855 [meta.py:probe():210] probe
+2022-12-30 15:47:12,436 DEBUG   HandlerThread:67855 [meta.py:_setup_git():200] setup git
+2022-12-30 15:47:12,495 DEBUG   HandlerThread:67855 [meta.py:_setup_git():207] setup git done
+2022-12-30 15:47:12,495 DEBUG   HandlerThread:67855 [meta.py:_save_pip():57] save pip
+2022-12-30 15:47:12,496 DEBUG   HandlerThread:67855 [meta.py:_save_pip():71] save pip done
+2022-12-30 15:47:12,496 DEBUG   HandlerThread:67855 [meta.py:_save_conda():78] save conda
+2022-12-30 15:47:16,396 DEBUG   HandlerThread:67855 [meta.py:_save_conda():86] save conda done
+2022-12-30 15:47:16,396 DEBUG   HandlerThread:67855 [meta.py:probe():252] probe done
+2022-12-30 15:47:16,400 DEBUG   HandlerThread:67855 [handler.py:handle_request():121] handle_request: stop_status
+2022-12-30 15:47:16,400 DEBUG   SenderThread:67855 [sender.py:send_request():183] send_request: stop_status
+2022-12-30 15:47:16,640 DEBUG   SenderThread:67855 [sender.py:send():173] send: files
+2022-12-30 15:47:16,641 INFO    SenderThread:67855 [sender.py:_save_file():808] saving file wandb-metadata.json with policy now
+2022-12-30 15:47:17,825 DEBUG   SenderThread:67855 [sender.py:send():173] send: history
+2022-12-30 15:47:17,825 DEBUG   SenderThread:67855 [sender.py:send():173] send: summary
+2022-12-30 15:47:17,827 INFO    SenderThread:67855 [sender.py:_save_file():808] saving file wandb-summary.json with policy end
+2022-12-30 15:47:17,827 DEBUG   SenderThread:67855 [sender.py:send():173] send: history
+2022-12-30 15:47:17,827 DEBUG   SenderThread:67855 [sender.py:send():173] send: summary
+2022-12-30 15:47:17,827 INFO    SenderThread:67855 [sender.py:_save_file():808] saving file wandb-summary.json with policy end
+2022-12-30 15:47:17,827 DEBUG   SenderThread:67855 [sender.py:send():173] send: history
+2022-12-30 15:47:17,827 DEBUG   SenderThread:67855 [sender.py:send():173] send: summary
+2022-12-30 15:47:17,827 INFO    SenderThread:67855 [sender.py:_save_file():808] saving file wandb-summary.json with policy end
+2022-12-30 15:47:17,828 DEBUG   SenderThread:67855 [sender.py:send():173] send: history
+2022-12-30 15:47:17,828 DEBUG   SenderThread:67855 [sender.py:send():173] send: summary
+2022-12-30 15:47:17,828 INFO    SenderThread:67855 [sender.py:_save_file():808] saving file wandb-summary.json with policy end
+2022-12-30 15:47:17,843 DEBUG   SenderThread:67855 [sender.py:send():173] send: history
+2022-12-30 15:47:17,843 DEBUG   SenderThread:67855 [sender.py:send():173] send: summary
+2022-12-30 15:47:17,845 INFO    SenderThread:67855 [sender.py:_save_file():808] saving file wandb-summary.json with policy end
+2022-12-30 15:47:31,658 DEBUG   HandlerThread:67855 [handler.py:handle_request():121] handle_request: stop_status
+2022-12-30 15:47:31,663 DEBUG   SenderThread:67855 [sender.py:send_request():183] send_request: stop_status
+2022-12-30 15:47:41,598 DEBUG   SenderThread:67855 [sender.py:send():173] send: stats
+2022-12-30 15:47:46,912 DEBUG   HandlerThread:67855 [handler.py:handle_request():121] handle_request: stop_status
+2022-12-30 15:47:46,912 DEBUG   SenderThread:67855 [sender.py:send_request():183] send_request: stop_status
+2022-12-30 15:48:02,148 DEBUG   HandlerThread:67855 [handler.py:handle_request():121] handle_request: stop_status
+2022-12-30 15:48:02,150 DEBUG   SenderThread:67855 [sender.py:send_request():183] send_request: stop_status
+2022-12-30 15:48:12,793 DEBUG   SenderThread:67855 [sender.py:send():173] send: stats
+2022-12-30 15:48:16,677 WARNING MainThread:67855 [internal.py:wandb_internal():146] Internal process interrupt: 1
+2022-12-30 15:48:17,754 WARNING MainThread:67855 [internal.py:wandb_internal():146] Internal process interrupt: 2
+2022-12-30 15:48:17,755 ERROR   MainThread:67855 [internal.py:wandb_internal():149] Internal process interrupted.
+2022-12-30 15:48:18,591 INFO    HandlerThread:67855 [handler.py:finish():629] shutting down handler
+2022-12-30 15:48:18,593 INFO    SenderThread:67855 [sender.py:finish():912] shutting down sender
+2022-12-30 15:48:18,601 INFO    WriterThread:67855 [datastore.py:close():258] close: /Users/kofoed/Documents/repos/lambo_kofoed/data/experiments/test/wandb/run-20221230_154708-2v8jzhha/run-2v8jzhha.wandb
+2022-12-30 15:48:19,989 INFO    MainThread:67855 [internal.py:handle_exit():78] Internal process exited

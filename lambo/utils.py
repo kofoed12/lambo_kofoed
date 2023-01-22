@@ -103,6 +103,8 @@ class ResidueTokenizer(IntTokenizer):
     def __init__(self):
         super().__init__(AMINO_ACIDS, RESIDUE_ALPHABET)
 
+    def __str__(self):
+        return str(self.__class__) + ": " + str(self.__dict__)
 
 def random_proteins(num, min_len=200, max_len=250):
     alphabet = AMINO_ACIDS

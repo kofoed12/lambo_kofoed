@@ -1,7 +1,8 @@
 _target_: lambo.optimizers.lambo.LaMBO
 _recursive_: False
 num_rounds: 64
-num_gens: 16
+# num_gens: 16
+num_gens: 2
 num_opt_steps: 32
 patience: 32
 lr: 0.1

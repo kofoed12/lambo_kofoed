@@ -1,0 +1,28 @@
+{
+    "os": "macOS-10.16-x86_64-i386-64bit",
+    "python": "3.8.13",
+    "heartbeatAt": "2022-12-30T16:27:17.173305",
+    "startedAt": "2022-12-30T16:27:12.641670",
+    "docker": null,
+    "cpu_count": 8,
+    "cuda": null,
+    "args": [
+        "optimizer=lambo",
+        "optimizer.encoder_obj=mlm",
+        "task=regex",
+        "tokenizer=protein",
+        "surrogate=multi_task_exact_gp",
+        "acquisition=nehvi"
+    ],
+    "state": "running",
+    "program": "<python with no main file>",
+    "git": {
+        "remote": "https://github.com/kofoed12/lambo_kofoed",
+        "commit": "12941703fd752e994f7f53dc9bc0b6a251327e6e"
+    },
+    "email": "kofoed1997@live.dk",
+    "root": "/Users/kofoed/Documents/repos/lambo_kofoed",
+    "host": "Mikkels-MBP.webspeed.dk",
+    "username": "kofoed",
+    "executable": "/Users/kofoed/opt/anaconda3/envs/lambo-env/bin/python"
+}

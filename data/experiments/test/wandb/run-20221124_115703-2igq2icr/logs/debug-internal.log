@@ -1,0 +1,70 @@
+2022-11-24 11:57:04,366 INFO    MainThread:48124 [internal.py:wandb_internal():88] W&B internal server running at pid: 48124, started at: 2022-11-24 11:57:04.366291
+2022-11-24 11:57:04,368 INFO    WriterThread:48124 [datastore.py:open_for_write():77] open: /Users/kofoed/Documents/repos/lambo_kofoed/data/experiments/test/wandb/run-20221124_115703-2igq2icr/run-2igq2icr.wandb
+2022-11-24 11:57:04,368 DEBUG   HandlerThread:48124 [handler.py:handle_request():121] handle_request: check_version
+2022-11-24 11:57:04,370 DEBUG   SenderThread:48124 [sender.py:send():173] send: header
+2022-11-24 11:57:04,370 DEBUG   SenderThread:48124 [sender.py:send_request():183] send_request: check_version
+2022-11-24 11:57:04,380 DEBUG   SenderThread:48124 [sender.py:send():173] send: run
+2022-11-24 11:57:07,927 ERROR   SenderThread:48124 [retry.py:__call__():114] Retry attempt failed:
+Traceback (most recent call last):
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/site-packages/urllib3/connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/site-packages/urllib3/util/connection.py", line 72, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/socket.py", line 918, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 8] nodename nor servname provided, or not known
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/site-packages/urllib3/connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/site-packages/urllib3/connectionpool.py", line 386, in _make_request
+    self._validate_conn(conn)
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/site-packages/urllib3/connectionpool.py", line 1042, in _validate_conn
+    conn.connect()
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/site-packages/urllib3/connection.py", line 358, in connect
+    self.sock = conn = self._new_conn()
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/site-packages/urllib3/connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x7fe9982fb640>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/site-packages/requests/adapters.py", line 489, in send
+    resp = conn.urlopen(
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    retries = retries.increment(
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/site-packages/urllib3/util/retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.wandb.ai', port=443): Max retries exceeded with url: /graphql (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fe9982fb640>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/site-packages/wandb/old/retry.py", line 100, in __call__
+    result = self._call_fn(*args, **kwargs)
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/site-packages/wandb/sdk/internal/internal_api.py", line 127, in execute
+    return self.client.execute(*args, **kwargs)
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/site-packages/wandb/vendor/gql-0.2.0/gql/client.py", line 52, in execute
+    result = self._get_result(document, *args, **kwargs)
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/site-packages/wandb/vendor/gql-0.2.0/gql/client.py", line 60, in _get_result
+    return self.transport.execute(document, *args, **kwargs)
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/site-packages/wandb/vendor/gql-0.2.0/gql/transport/requests.py", line 38, in execute
+    request = requests.post(self.url, **post_args)
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/site-packages/requests/api.py", line 115, in post
+    return request("post", url, data=data, json=json, **kwargs)
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/site-packages/requests/sessions.py", line 587, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/site-packages/requests/sessions.py", line 701, in send
+    r = adapter.send(request, **kwargs)
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/site-packages/requests/adapters.py", line 565, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='api.wandb.ai', port=443): Max retries exceeded with url: /graphql (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fe9982fb640>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2022-11-24 11:57:34,392 DEBUG   HandlerThread:48124 [handler.py:handle_request():121] handle_request: shutdown
+2022-11-24 11:57:34,393 INFO    HandlerThread:48124 [handler.py:finish():629] shutting down handler
+2022-11-24 11:57:34,488 INFO    WriterThread:48124 [datastore.py:close():258] close: /Users/kofoed/Documents/repos/lambo_kofoed/data/experiments/test/wandb/run-20221124_115703-2igq2icr/run-2igq2icr.wandb
+2022-11-24 12:01:19,429 INFO    MainThread:48124 [internal.py:handle_exit():78] Internal process exited

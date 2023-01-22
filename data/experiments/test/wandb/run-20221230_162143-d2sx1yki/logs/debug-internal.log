@@ -1,0 +1,29 @@
+2022-12-30 16:21:43,938 INFO    MainThread:69824 [internal.py:wandb_internal():88] W&B internal server running at pid: 69824, started at: 2022-12-30 16:21:43.937711
+2022-12-30 16:21:43,940 INFO    WriterThread:69824 [datastore.py:open_for_write():77] open: /Users/kofoed/Documents/repos/lambo_kofoed/data/experiments/test/wandb/run-20221230_162143-d2sx1yki/run-d2sx1yki.wandb
+2022-12-30 16:21:43,941 DEBUG   HandlerThread:69824 [handler.py:handle_request():121] handle_request: check_version
+2022-12-30 16:21:43,942 DEBUG   SenderThread:69824 [sender.py:send():173] send: header
+2022-12-30 16:21:43,942 DEBUG   SenderThread:69824 [sender.py:send_request():183] send_request: check_version
+2022-12-30 16:21:44,051 DEBUG   SenderThread:69824 [sender.py:send():173] send: run
+2022-12-30 16:21:44,360 INFO    SenderThread:69824 [sender.py:_start_run_threads():678] run started: d2sx1yki with start time 1672413703
+2022-12-30 16:21:44,361 DEBUG   SenderThread:69824 [sender.py:send():173] send: summary
+2022-12-30 16:21:44,361 INFO    SenderThread:69824 [sender.py:_save_file():808] saving file wandb-summary.json with policy end
+2022-12-30 16:21:44,362 DEBUG   HandlerThread:69824 [handler.py:handle_request():121] handle_request: run_start
+2022-12-30 16:21:47,513 DEBUG   HandlerThread:69824 [meta.py:__init__():39] meta init
+2022-12-30 16:21:47,513 DEBUG   HandlerThread:69824 [meta.py:__init__():53] meta init done
+2022-12-30 16:21:47,513 DEBUG   HandlerThread:69824 [meta.py:probe():210] probe
+2022-12-30 16:21:47,515 DEBUG   HandlerThread:69824 [meta.py:_setup_git():200] setup git
+2022-12-30 16:21:47,576 DEBUG   HandlerThread:69824 [meta.py:_setup_git():207] setup git done
+2022-12-30 16:21:47,576 DEBUG   HandlerThread:69824 [meta.py:_save_pip():57] save pip
+2022-12-30 16:21:47,577 DEBUG   HandlerThread:69824 [meta.py:_save_pip():71] save pip done
+2022-12-30 16:21:47,577 DEBUG   HandlerThread:69824 [meta.py:_save_conda():78] save conda
+2022-12-30 16:21:49,329 WARNING MainThread:69824 [internal.py:wandb_internal():146] Internal process interrupt: 1
+2022-12-30 16:21:49,477 DEBUG   HandlerThread:69824 [meta.py:_save_conda():86] save conda done
+2022-12-30 16:21:49,477 DEBUG   HandlerThread:69824 [meta.py:probe():252] probe done
+2022-12-30 16:21:49,481 DEBUG   SenderThread:69824 [sender.py:send():173] send: files
+2022-12-30 16:21:49,482 INFO    SenderThread:69824 [sender.py:_save_file():808] saving file wandb-metadata.json with policy now
+2022-12-30 16:21:50,384 WARNING MainThread:69824 [internal.py:wandb_internal():146] Internal process interrupt: 2
+2022-12-30 16:21:50,384 ERROR   MainThread:69824 [internal.py:wandb_internal():149] Internal process interrupted.
+2022-12-30 16:21:50,482 INFO    HandlerThread:69824 [handler.py:finish():629] shutting down handler
+2022-12-30 16:21:50,485 INFO    WriterThread:69824 [datastore.py:close():258] close: /Users/kofoed/Documents/repos/lambo_kofoed/data/experiments/test/wandb/run-20221230_162143-d2sx1yki/run-d2sx1yki.wandb
+2022-12-30 16:21:50,485 INFO    SenderThread:69824 [sender.py:finish():912] shutting down sender
+2022-12-30 16:21:51,867 INFO    MainThread:69824 [internal.py:handle_exit():78] Internal process exited

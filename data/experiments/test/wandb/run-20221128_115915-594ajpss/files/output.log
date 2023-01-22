@@ -1,0 +1,1 @@
+UnboundLocalError: local variable 'is_seq' referenced before assignment

@@ -50,3 +50,5 @@ class NoisyEHVI(EHVI):
             self.acq_fn = qMTGPDiscreteNEHVI(**acq_kwargs)
         else:
             self.acq_fn = qDiscreteNEHVI(**acq_kwargs)
+    def __str__(self):
+        return str(self.__class__) + ": " + str(self.__dict__)

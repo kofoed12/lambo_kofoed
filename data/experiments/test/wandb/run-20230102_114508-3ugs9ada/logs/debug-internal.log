@@ -1,0 +1,14 @@
+2023-01-02 11:45:09,579 INFO    MainThread:84180 [internal.py:wandb_internal():88] W&B internal server running at pid: 84180, started at: 2023-01-02 11:45:09.579623
+2023-01-02 11:45:09,580 DEBUG   HandlerThread:84180 [handler.py:handle_request():121] handle_request: check_version
+2023-01-02 11:45:09,581 INFO    WriterThread:84180 [datastore.py:open_for_write():77] open: /Users/kofoed/Documents/repos/lambo_kofoed/data/experiments/test/wandb/run-20230102_114508-3ugs9ada/run-3ugs9ada.wandb
+2023-01-02 11:45:09,581 DEBUG   SenderThread:84180 [sender.py:send():173] send: header
+2023-01-02 11:45:09,582 DEBUG   SenderThread:84180 [sender.py:send_request():183] send_request: check_version
+2023-01-02 11:45:09,672 DEBUG   SenderThread:84180 [sender.py:send():173] send: run
+2023-01-02 11:45:09,744 WARNING MainThread:84180 [internal.py:wandb_internal():146] Internal process interrupt: 1
+2023-01-02 11:45:09,929 INFO    SenderThread:84180 [sender.py:_start_run_threads():678] run started: 3ugs9ada with start time 1672656308
+2023-01-02 11:45:18,429 WARNING MainThread:84180 [internal.py:wandb_internal():146] Internal process interrupt: 2
+2023-01-02 11:45:18,429 ERROR   MainThread:84180 [internal.py:wandb_internal():149] Internal process interrupted.
+2023-01-02 11:45:18,682 INFO    HandlerThread:84180 [handler.py:finish():629] shutting down handler
+2023-01-02 11:45:18,723 INFO    WriterThread:84180 [datastore.py:close():258] close: /Users/kofoed/Documents/repos/lambo_kofoed/data/experiments/test/wandb/run-20230102_114508-3ugs9ada/run-3ugs9ada.wandb
+2023-01-02 11:45:18,969 INFO    SenderThread:84180 [sender.py:finish():912] shutting down sender
+2023-01-02 11:45:21,196 INFO    MainThread:84180 [internal.py:handle_exit():78] Internal process exited

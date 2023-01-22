@@ -1,0 +1,27 @@
+2022-12-29 14:53:54,227 INFO    MainThread:56235 [internal.py:wandb_internal():88] W&B internal server running at pid: 56235, started at: 2022-12-29 14:53:54.226845
+2022-12-29 14:53:54,228 DEBUG   HandlerThread:56235 [handler.py:handle_request():121] handle_request: check_version
+2022-12-29 14:53:54,229 INFO    WriterThread:56235 [datastore.py:open_for_write():77] open: /Users/kofoed/Documents/repos/lambo_kofoed/data/experiments/test/wandb/run-20221229_145353-mxn6mh59/run-mxn6mh59.wandb
+2022-12-29 14:53:54,229 DEBUG   SenderThread:56235 [sender.py:send():173] send: header
+2022-12-29 14:53:54,230 DEBUG   SenderThread:56235 [sender.py:send_request():183] send_request: check_version
+2022-12-29 14:53:54,340 DEBUG   SenderThread:56235 [sender.py:send():173] send: run
+2022-12-29 14:53:54,685 INFO    SenderThread:56235 [sender.py:_start_run_threads():678] run started: mxn6mh59 with start time 1672322033
+2022-12-29 14:53:54,687 DEBUG   SenderThread:56235 [sender.py:send():173] send: summary
+2022-12-29 14:53:54,687 INFO    SenderThread:56235 [sender.py:_save_file():808] saving file wandb-summary.json with policy end
+2022-12-29 14:53:54,690 DEBUG   HandlerThread:56235 [handler.py:handle_request():121] handle_request: run_start
+2022-12-29 14:53:55,944 WARNING MainThread:56235 [internal.py:wandb_internal():146] Internal process interrupt: 1
+2022-12-29 14:53:56,953 WARNING MainThread:56235 [internal.py:is_dead():343] Internal process exiting, parent pid 56225 disappeared
+2022-12-29 14:53:56,953 ERROR   MainThread:56235 [internal.py:wandb_internal():142] Internal process shutdown.
+2022-12-29 14:53:57,951 INFO    SenderThread:56235 [sender.py:finish():912] shutting down sender
+2022-12-29 14:53:57,956 INFO    WriterThread:56235 [datastore.py:close():258] close: /Users/kofoed/Documents/repos/lambo_kofoed/data/experiments/test/wandb/run-20221229_145353-mxn6mh59/run-mxn6mh59.wandb
+2022-12-29 14:53:58,276 DEBUG   HandlerThread:56235 [meta.py:__init__():39] meta init
+2022-12-29 14:53:58,277 DEBUG   HandlerThread:56235 [meta.py:__init__():53] meta init done
+2022-12-29 14:53:58,277 DEBUG   HandlerThread:56235 [meta.py:probe():210] probe
+2022-12-29 14:53:58,278 DEBUG   HandlerThread:56235 [meta.py:_setup_git():200] setup git
+2022-12-29 14:53:58,499 DEBUG   HandlerThread:56235 [meta.py:_setup_git():207] setup git done
+2022-12-29 14:53:58,500 DEBUG   HandlerThread:56235 [meta.py:_save_pip():57] save pip
+2022-12-29 14:53:58,500 DEBUG   HandlerThread:56235 [meta.py:_save_pip():71] save pip done
+2022-12-29 14:53:58,500 DEBUG   HandlerThread:56235 [meta.py:_save_conda():78] save conda
+2022-12-29 14:54:02,607 DEBUG   HandlerThread:56235 [meta.py:_save_conda():86] save conda done
+2022-12-29 14:54:02,608 DEBUG   HandlerThread:56235 [meta.py:probe():252] probe done
+2022-12-29 14:54:02,614 INFO    HandlerThread:56235 [handler.py:finish():629] shutting down handler
+2022-12-29 14:54:02,617 INFO    MainThread:56235 [internal.py:handle_exit():78] Internal process exited

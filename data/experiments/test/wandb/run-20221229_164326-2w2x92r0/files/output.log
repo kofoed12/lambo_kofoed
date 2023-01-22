@@ -1,0 +1,1 @@
+AttributeError: 'MultitaskGPPosterior' object has no attribute 'shape'

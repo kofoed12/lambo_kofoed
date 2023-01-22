@@ -45,6 +45,9 @@ class Normalizer(object):
     def inv_transform(self, arr):
         return self.scale * arr + self.loc
 
+    def __str__(self):
+        return str(self.__class__) + ": " + str(self.__dict__)
+
 
 class SequentialGeneticOptimizer(object):
     def __init__(self, bb_task, algorithm, tokenizer, num_rounds, num_gens, seed, concentrate_pool=1,

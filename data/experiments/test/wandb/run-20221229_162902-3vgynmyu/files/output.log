@@ -1,0 +1,1 @@
+self.active_candidates, self.active_targets <class 'lambo.candidate.StringCandidate'>: {'wild_residue_seq': 'DDGIIIDPYMDILFGGRMNNREHCAKNETHRW', 'uuid': 'fa1598e18512435da1d44caafd24436e', 'wild_name': 'unnamed', 'mutant_residue_seq': 'DDGIIIDPYMDILFGGRMNNREHCAKNETHRW', 'dist_from_wild': 0.0, 'tokenizer': <lambo.utils.ResidueTokenizer object at 0x7fe8fa032a00>} [-0. -0. -1.]

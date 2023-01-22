@@ -1,0 +1,10 @@
+2022-12-30 13:20:17,026 INFO    MainThread:65230 [internal.py:wandb_internal():88] W&B internal server running at pid: 65230, started at: 2022-12-30 13:20:17.026011
+2022-12-30 13:20:17,027 DEBUG   HandlerThread:65230 [handler.py:handle_request():121] handle_request: check_version
+2022-12-30 13:20:17,028 INFO    WriterThread:65230 [datastore.py:open_for_write():77] open: /Users/kofoed/Documents/repos/lambo_kofoed/data/experiments/test/wandb/run-20221230_132016-6n0v55p9/run-6n0v55p9.wandb
+2022-12-30 13:20:17,029 DEBUG   SenderThread:65230 [sender.py:send():173] send: header
+2022-12-30 13:20:17,029 DEBUG   SenderThread:65230 [sender.py:send_request():183] send_request: check_version
+2022-12-30 13:20:17,135 DEBUG   SenderThread:65230 [sender.py:send():173] send: run
+2022-12-30 13:20:17,471 INFO    SenderThread:65230 [sender.py:_start_run_threads():678] run started: 6n0v55p9 with start time 1672402816
+2022-12-30 13:20:17,472 DEBUG   SenderThread:65230 [sender.py:send():173] send: summary
+2022-12-30 13:20:17,473 INFO    SenderThread:65230 [sender.py:_save_file():808] saving file wandb-summary.json with policy end
+2022-12-30 13:20:17,476 DEBUG   HandlerThread:65230 [handler.py:handle_request():121] handle_request: run_start

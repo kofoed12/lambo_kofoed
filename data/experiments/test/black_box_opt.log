@@ -1,0 +1,1218 @@
+[2022-11-21 16:26:10,334][root][ERROR] - Encountered error: `positional argument follows keyword argument (lambo.py, line 343)` when loading module 'lambo.optimizers.lambo.LaMBO'
+Traceback (most recent call last):
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/site-packages/hydra/_internal/utils.py", line 572, in _locate
+    import_module(mod)
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 839, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 976, in get_code
+  File "<frozen importlib._bootstrap_external>", line 906, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/optimizers/lambo.py", line 343
+    rnd_acq_vals = constraint_acq_fn(all_seqs=all_seqs,rnd_seqs[None, :]).mean().item()
+                                                       ^
+SyntaxError: positional argument follows keyword argument
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "scripts/black_box_opt.py", line 47, in main
+    optimizer = hydra.utils.instantiate(
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/site-packages/hydra/_internal/instantiate/_instantiate2.py", line 180, in instantiate
+    return instantiate_node(config, *args, recursive=_recursive_, convert=_convert_)
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/site-packages/hydra/_internal/instantiate/_instantiate2.py", line 240, in instantiate_node
+    target = _resolve_target(node.get(_Keys.TARGET))
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/site-packages/hydra/_internal/instantiate/_instantiate2.py", line 104, in _resolve_target
+    return _locate(target)
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/site-packages/hydra/_internal/utils.py", line 574, in _locate
+    raise ImportError(
+ImportError: Encountered error: `positional argument follows keyword argument (lambo.py, line 343)` when loading module 'lambo.optimizers.lambo.LaMBO'
+[2022-11-21 16:27:29,828][root][ERROR] - Encountered error: `positional argument follows keyword argument (lambo.py, line 343)` when loading module 'lambo.optimizers.lambo.LaMBO'
+Traceback (most recent call last):
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/site-packages/hydra/_internal/utils.py", line 572, in _locate
+    import_module(mod)
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 839, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 976, in get_code
+  File "<frozen importlib._bootstrap_external>", line 906, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/optimizers/lambo.py", line 343
+    rnd_acq_vals = constraint_acq_fn(all_seqs=all_seqs,rnd_seqs[None, :]).mean().item()
+                                                       ^
+SyntaxError: positional argument follows keyword argument
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "scripts/black_box_opt.py", line 47, in main
+    optimizer = hydra.utils.instantiate(
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/site-packages/hydra/_internal/instantiate/_instantiate2.py", line 180, in instantiate
+    return instantiate_node(config, *args, recursive=_recursive_, convert=_convert_)
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/site-packages/hydra/_internal/instantiate/_instantiate2.py", line 240, in instantiate_node
+    target = _resolve_target(node.get(_Keys.TARGET))
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/site-packages/hydra/_internal/instantiate/_instantiate2.py", line 104, in _resolve_target
+    return _locate(target)
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/site-packages/hydra/_internal/utils.py", line 574, in _locate
+    raise ImportError(
+ImportError: Encountered error: `positional argument follows keyword argument (lambo.py, line 343)` when loading module 'lambo.optimizers.lambo.LaMBO'
+[2022-11-21 16:37:19,541][root][ERROR] - unhashable type: 'numpy.ndarray'
+Traceback (most recent call last):
+  File "scripts/black_box_opt.py", line 55, in main
+    metrics = optimizer.optimize(
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/optimizers/lambo.py", line 343, in optimize
+    rnd_acq_vals = constraint_acq_fn(all_seqs,rnd_seqs[None, :], self.encoder.tokenizer).mean().item()
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/optimizers/lambo.py", line 518, in constraint_acq_fn
+    sampled_tokens = str_to_tokens(sampled_seqs, tokenizer)
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/utils.py", line 409, in str_to_tokens
+    tokens = [
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/utils.py", line 410, in <listcomp>
+    torch.tensor(tokenizer.encode(x)) for x in str_array
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/site-packages/cachetools/__init__.py", line 638, in wrapper
+    return cache[k]
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/site-packages/cachetools/__init__.py", line 211, in __getitem__
+    value = cache_getitem(self, key)
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/site-packages/cachetools/__init__.py", line 68, in __getitem__
+    return self.__data[key]
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/site-packages/cachetools/keys.py", line 19, in __hash__
+    self.__hashvalue = hashvalue = hash(self)
+TypeError: unhashable type: 'numpy.ndarray'
+[2022-11-21 16:50:37,122][root][ERROR] - name 'all_tokens' is not defined
+Traceback (most recent call last):
+  File "scripts/black_box_opt.py", line 55, in main
+    metrics = optimizer.optimize(
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/optimizers/lambo.py", line 345, in optimize
+    rnd_acq_vals = constraint_acq_fn(all_tok_idxs,rnd_tok_idxs)
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/optimizers/lambo.py", line 519, in constraint_acq_fn
+    print("all tokens shape",all_tokens.shape)
+NameError: name 'all_tokens' is not defined
+[2022-11-22 11:35:49,325][root][ERROR] - local variable 'rnd_seqs' referenced before assignment
+Traceback (most recent call last):
+  File "scripts/black_box_opt.py", line 55, in main
+    metrics = optimizer.optimize(
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/optimizers/lambo.py", line 69, in optimize
+    rnd_tok_idxs = str_to_tokens(rnd_seqs, self.encoder.tokenizer)
+UnboundLocalError: local variable 'rnd_seqs' referenced before assignment
+[2022-11-22 11:43:47,175][root][ERROR] - 'numpy.ndarray' object has no attribute 'dist_from_wild'
+Traceback (most recent call last):
+  File "scripts/black_box_opt.py", line 55, in main
+    metrics = optimizer.optimize(
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/optimizers/lambo.py", line 89, in optimize
+    print("candidate pool", candidate_pool.dist_from_wild)
+AttributeError: 'numpy.ndarray' object has no attribute 'dist_from_wild'
+[2022-11-22 11:46:46,846][root][ERROR] - 'numpy.ndarray' object has no attribute 'dist_from_wild'
+Traceback (most recent call last):
+  File "scripts/black_box_opt.py", line 55, in main
+    metrics = optimizer.optimize(
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/optimizers/lambo.py", line 89, in optimize
+    print("candidate pool", *candidate_pool.dist_from_wild)
+AttributeError: 'numpy.ndarray' object has no attribute 'dist_from_wild'
+[2022-11-22 11:48:41,070][root][ERROR] - list assignment index out of range
+Traceback (most recent call last):
+  File "scripts/black_box_opt.py", line 55, in main
+    metrics = optimizer.optimize(
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/optimizers/lambo.py", line 90, in optimize
+    dists[i] = candidate_pool[i].dist_from_wild
+IndexError: list assignment index out of range
+[2022-11-24 11:57:01,699][wandb.old.retry][ERROR] - Retry attempt failed:
+Traceback (most recent call last):
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/site-packages/urllib3/connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/site-packages/urllib3/util/connection.py", line 72, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/socket.py", line 918, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 8] nodename nor servname provided, or not known
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/site-packages/urllib3/connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/site-packages/urllib3/connectionpool.py", line 386, in _make_request
+    self._validate_conn(conn)
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/site-packages/urllib3/connectionpool.py", line 1042, in _validate_conn
+    conn.connect()
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/site-packages/urllib3/connection.py", line 358, in connect
+    self.sock = conn = self._new_conn()
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/site-packages/urllib3/connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x7fe614177f70>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/site-packages/requests/adapters.py", line 489, in send
+    resp = conn.urlopen(
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    retries = retries.increment(
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/site-packages/urllib3/util/retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.wandb.ai', port=443): Max retries exceeded with url: /graphql (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fe614177f70>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/site-packages/wandb/old/retry.py", line 100, in __call__
+    result = self._call_fn(*args, **kwargs)
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/site-packages/wandb/sdk/internal/internal_api.py", line 127, in execute
+    return self.client.execute(*args, **kwargs)
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/site-packages/wandb/vendor/gql-0.2.0/gql/client.py", line 52, in execute
+    result = self._get_result(document, *args, **kwargs)
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/site-packages/wandb/vendor/gql-0.2.0/gql/client.py", line 60, in _get_result
+    return self.transport.execute(document, *args, **kwargs)
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/site-packages/wandb/vendor/gql-0.2.0/gql/transport/requests.py", line 38, in execute
+    request = requests.post(self.url, **post_args)
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/site-packages/requests/api.py", line 115, in post
+    return request("post", url, data=data, json=json, **kwargs)
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/site-packages/requests/sessions.py", line 587, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/site-packages/requests/sessions.py", line 701, in send
+    r = adapter.send(request, **kwargs)
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/site-packages/requests/adapters.py", line 565, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='api.wandb.ai', port=443): Max retries exceeded with url: /graphql (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fe614177f70>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+[2022-11-25 11:55:28,964][root][ERROR] - Encountered error: `name 'Optional' is not defined` when loading module 'lambo.acquisitions.ehvi.NoisyEHVI'
+Traceback (most recent call last):
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/site-packages/hydra/_internal/utils.py", line 572, in _locate
+    import_module(mod)
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/acquisitions/ehvi.py", line 7, in <module>
+    from lambo.acquisitions.monte_carlo import qDiscreteEHVI, qMTGPDiscreteNEHVI, qDiscreteNEHVI
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/acquisitions/monte_carlo.py", line 25, in <module>
+    class qDiscreteNEHVI(qNoisyExpectedHypervolumeImprovement):
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/acquisitions/monte_carlo.py", line 110, in qDiscreteNEHVI
+    def _my_compute_qehvi(self, samples: Tensor, X: Optional[Tensor] = None) -> Tensor:
+NameError: name 'Optional' is not defined
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "scripts/black_box_opt.py", line 55, in main
+    metrics = optimizer.optimize(
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/optimizers/lambo.py", line 230, in optimize
+    acq_fn = hydra.utils.instantiate(
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/site-packages/hydra/_internal/instantiate/_instantiate2.py", line 180, in instantiate
+    return instantiate_node(config, *args, recursive=_recursive_, convert=_convert_)
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/site-packages/hydra/_internal/instantiate/_instantiate2.py", line 240, in instantiate_node
+    target = _resolve_target(node.get(_Keys.TARGET))
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/site-packages/hydra/_internal/instantiate/_instantiate2.py", line 104, in _resolve_target
+    return _locate(target)
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/site-packages/hydra/_internal/utils.py", line 574, in _locate
+    raise ImportError(
+ImportError: Encountered error: `name 'Optional' is not defined` when loading module 'lambo.acquisitions.ehvi.NoisyEHVI'
+[2022-11-28 12:08:06,970][root][ERROR] - local variable 'is_seq' referenced before assignment
+Traceback (most recent call last):
+  File "scripts/black_box_opt.py", line 55, in main
+    metrics = optimizer.optimize(
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/optimizers/lambo.py", line 337, in optimize
+    lat_acq_vals = acq_fn(pooled_features.unsqueeze(0))
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/acquisitions/ehvi.py", line 30, in __call__
+    batched_call(self.acq_fn, candidates, batch_size=1)
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/utils.py", line 184, in batched_call
+    return [fn(batch, *args, **kwargs) for batch in arg_batches]
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/utils.py", line 184, in <listcomp>
+    return [fn(batch, *args, **kwargs) for batch in arg_batches]
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/acquisitions/monte_carlo.py", line 97, in forward
+    if is_seq:
+UnboundLocalError: local variable 'is_seq' referenced before assignment
+[2022-11-28 16:28:45,300][root][ERROR] - one of the variables needed for gradient computation has been modified by an inplace operation: [torch.FloatTensor [2, 1, 1338, 1]] is at version 2; expected version 1 instead. Hint: enable anomaly detection to find the operation that failed to compute its gradient, with torch.autograd.set_detect_anomaly(True).
+Traceback (most recent call last):
+  File "scripts/black_box_opt.py", line 55, in main
+    metrics = optimizer.optimize(
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/optimizers/lambo.py", line 360, in optimize
+    loss.backward()
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/site-packages/torch/_tensor.py", line 307, in backward
+    torch.autograd.backward(self, gradient, retain_graph, create_graph, inputs=inputs)
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/site-packages/torch/autograd/__init__.py", line 154, in backward
+    Variable._execution_engine.run_backward(
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/site-packages/torch/autograd/function.py", line 199, in apply
+    return user_fn(self, *args)
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/site-packages/gpytorch/functions/_matmul.py", line 35, in backward
+    rhs = ctx.saved_tensors[0]
+RuntimeError: one of the variables needed for gradient computation has been modified by an inplace operation: [torch.FloatTensor [2, 1, 1338, 1]] is at version 2; expected version 1 instead. Hint: enable anomaly detection to find the operation that failed to compute its gradient, with torch.autograd.set_detect_anomaly(True).
+[2022-12-29 16:01:01,266][root][ERROR] - optimize() got multiple values for argument 'log_prefix'
+Traceback (most recent call last):
+  File "scripts/black_box_opt.py", line 55, in main
+    metrics = optimizer.optimize(
+TypeError: optimize() got multiple values for argument 'log_prefix'
+[2022-12-29 16:01:52,795][root][ERROR] - local variable 'pareto_candidates' referenced before assignment
+Traceback (most recent call last):
+  File "scripts/black_box_opt.py", line 55, in main
+    metrics = optimizer.optimize(
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/optimizers/lambo_new.py", line 79, in optimize
+    self._log_candidates(pareto_candidates, pareto_targets, round_idx, log_prefix)
+UnboundLocalError: local variable 'pareto_candidates' referenced before assignment
+[2022-12-29 16:04:27,520][root][ERROR] - local variable 'new_seqs' referenced before assignment
+Traceback (most recent call last):
+  File "scripts/black_box_opt.py", line 55, in main
+    metrics = optimizer.optimize(
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/optimizers/lambo_new.py", line 85, in optimize
+    new_split = DataSplit(new_seqs, new_targets)
+UnboundLocalError: local variable 'new_seqs' referenced before assignment
+[2022-12-29 16:08:38,686][root][ERROR] - name 'tgt_transform' is not defined
+Traceback (most recent call last):
+  File "scripts/black_box_opt.py", line 55, in main
+    metrics = optimizer.optimize(
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/optimizers/lambo_new.py", line 94, in optimize
+    X_train, Y_train = self.train_split.inputs, tgt_transform(self.train_split.targets)
+NameError: name 'tgt_transform' is not defined
+[2022-12-29 16:19:29,163][root][ERROR] - 'NoneType' object is not iterable
+Traceback (most recent call last):
+  File "scripts/black_box_opt.py", line 55, in main
+    metrics = optimizer.optimize(
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/optimizers/lambo_new.py", line 124, in optimize
+    baseline_seqs = np.array([cand.mutant_residue_seq for cand in self.active_candidates])
+TypeError: 'NoneType' object is not iterable
+[2022-12-29 16:52:45,270][root][ERROR] - 'MultitaskGPPosterior' object has no attribute 'shape'
+Traceback (most recent call last):
+  File "scripts/black_box_opt.py", line 55, in main
+    metrics = optimizer.optimize(
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/optimizers/lambo.py", line 310, in optimize
+    lat_acq_vals = acq_fn(pooled_features.unsqueeze(0))
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/acquisitions/ehvi.py", line 30, in __call__
+    batched_call(self.acq_fn, candidates, batch_size=1)
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/utils.py", line 184, in batched_call
+    return [fn(batch, *args, **kwargs) for batch in arg_batches]
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/utils.py", line 184, in <listcomp>
+    return [fn(batch, *args, **kwargs) for batch in arg_batches]
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/acquisitions/monte_carlo.py", line 91, in forward
+    print("posterior shape",posterior.shape, posterior[0])
+AttributeError: 'MultitaskGPPosterior' object has no attribute 'shape'
+[2022-12-29 17:45:33,307][root][ERROR] - Encountered error: `expected an indented block (lambo.py, line 187)` when loading module 'lambo.optimizers.lambo.LaMBO'
+Traceback (most recent call last):
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/site-packages/hydra/_internal/utils.py", line 572, in _locate
+    import_module(mod)
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 839, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 976, in get_code
+  File "<frozen importlib._bootstrap_external>", line 906, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/optimizers/lambo.py", line 187
+    device="cuda:0"
+    ^
+IndentationError: expected an indented block
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "scripts/black_box_opt.py", line 47, in main
+    optimizer = hydra.utils.instantiate(
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/site-packages/hydra/_internal/instantiate/_instantiate2.py", line 180, in instantiate
+    return instantiate_node(config, *args, recursive=_recursive_, convert=_convert_)
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/site-packages/hydra/_internal/instantiate/_instantiate2.py", line 240, in instantiate_node
+    target = _resolve_target(node.get(_Keys.TARGET))
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/site-packages/hydra/_internal/instantiate/_instantiate2.py", line 104, in _resolve_target
+    return _locate(target)
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/site-packages/hydra/_internal/utils.py", line 574, in _locate
+    raise ImportError(
+ImportError: Encountered error: `expected an indented block (lambo.py, line 187)` when loading module 'lambo.optimizers.lambo.LaMBO'
+[2022-12-29 17:46:26,308][root][ERROR] - name 'nn' is not defined
+Traceback (most recent call last):
+  File "scripts/black_box_opt.py", line 55, in main
+    metrics = optimizer.optimize(
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/optimizers/lambo.py", line 192, in optimize
+    criterion=nn.MSELoss()
+NameError: name 'nn' is not defined
+[2022-12-29 17:47:48,691][root][ERROR] - name 'optim' is not defined
+Traceback (most recent call last):
+  File "scripts/black_box_opt.py", line 55, in main
+    metrics = optimizer.optimize(
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/optimizers/lambo.py", line 194, in optimize
+    optimizer=optim.SGD(DAEmodel.parameters(),lr=0.01,weight_decay=1e-5)
+NameError: name 'optim' is not defined
+[2022-12-29 17:51:58,163][root][ERROR] - name 'trainloader' is not defined
+Traceback (most recent call last):
+  File "scripts/black_box_opt.py", line 55, in main
+    metrics = optimizer.optimize(
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/optimizers/lambo.py", line 186, in optimize
+    model = train_DAE(all_tok_idxs)
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/models/dae.py", line 50, in train_DAE
+    l=len(trainloader)
+NameError: name 'trainloader' is not defined
+[2022-12-29 17:52:43,572][root][ERROR] - expected scalar type Float but found Long
+Traceback (most recent call last):
+  File "scripts/black_box_opt.py", line 55, in main
+    metrics = optimizer.optimize(
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/optimizers/lambo.py", line 186, in optimize
+    model = train_DAE(all_tok_idxs)
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/models/dae.py", line 58, in train_DAE
+    output=DAEmodel(x)
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/models/dae.py", line 32, in forward
+    x=self.encoder(x)
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/site-packages/torch/nn/modules/container.py", line 141, in forward
+    input = module(input)
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/site-packages/torch/nn/modules/linear.py", line 103, in forward
+    return F.linear(input, self.weight, self.bias)
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/site-packages/torch/nn/functional.py", line 1848, in linear
+    return torch._C._nn.linear(input, weight, bias)
+RuntimeError: expected scalar type Float but found Long
+[2022-12-29 17:54:46,624][root][ERROR] - forward() missing 1 required positional argument: 'target'
+Traceback (most recent call last):
+  File "scripts/black_box_opt.py", line 55, in main
+    metrics = optimizer.optimize(
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/optimizers/lambo.py", line 186, in optimize
+    model = train_DAE(all_tok_idxs)
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/models/dae.py", line 60, in train_DAE
+    loss=criterion(output)
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+TypeError: forward() missing 1 required positional argument: 'target'
+[2022-12-29 18:04:47,801][root][ERROR] - train_DAE() takes 1 positional argument but 2 were given
+Traceback (most recent call last):
+  File "scripts/black_box_opt.py", line 55, in main
+    metrics = optimizer.optimize(
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/optimizers/lambo.py", line 186, in optimize
+    model = train_DAE(str_to_tokens(X_train, self.encoder.tokenizer), str_to_tokens(X_test, self.encoder.tokenizer))
+TypeError: train_DAE() takes 1 positional argument but 2 were given
+[2022-12-30 12:21:59,929][root][ERROR] - ceil(): argument 'input' (position 1) must be Tensor, not float
+Traceback (most recent call last):
+  File "scripts/black_box_opt.py", line 55, in main
+    metrics = optimizer.optimize(
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/optimizers/lambo.py", line 186, in optimize
+    train_size = (torch.ceil(0.8*all_tok_idxs.shape[0]))
+TypeError: ceil(): argument 'input' (position 1) must be Tensor, not float
+[2022-12-30 12:39:44,067][root][ERROR] - name 'image' is not defined
+Traceback (most recent call last):
+  File "scripts/black_box_opt.py", line 55, in main
+    metrics = optimizer.optimize(
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/optimizers/lambo.py", line 188, in optimize
+    model, losses, outputs = train_DAE(all_tok_idxs, train_size, test_size)
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/models/dae.py", line 69, in train_DAE
+    outputs.append((epochs, image, reconstructed))
+NameError: name 'image' is not defined
+[2022-12-30 12:40:35,980][root][ERROR] - The wandb backend process has shutdown
+Traceback (most recent call last):
+  File "scripts/black_box_opt.py", line 55, in main
+    metrics = optimizer.optimize(
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/optimizers/lambo.py", line 102, in optimize
+    self._log_candidates(pareto_candidates, pareto_targets, round_idx, log_prefix)
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/optimizers/lambo.py", line 481, in _log_candidates
+    wandb.log(record)
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/site-packages/wandb/sdk/wandb_run.py", line 1085, in log
+    self.history._row_add(data)
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/site-packages/wandb/sdk/wandb_history.py", line 44, in _row_add
+    self._flush()
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/site-packages/wandb/sdk/wandb_history.py", line 59, in _flush
+    self._callback(row=self._data, step=self._step)
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/site-packages/wandb/sdk/wandb_run.py", line 835, in _history_callback
+    self._backend.interface.publish_history(
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/site-packages/wandb/sdk/interface/interface.py", line 227, in publish_history
+    self._publish_history(history)
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/site-packages/wandb/sdk/interface/interface.py", line 211, in _publish_history
+    self._publish(rec)
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/site-packages/wandb/sdk/interface/interface.py", line 528, in _publish
+    raise Exception("The wandb backend process has shutdown")
+Exception: The wandb backend process has shutdown
+[2022-12-30 12:49:10,971][root][ERROR] - too many values to unpack (expected 2)
+Traceback (most recent call last):
+  File "scripts/black_box_opt.py", line 55, in main
+    metrics = optimizer.optimize(
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/optimizers/lambo.py", line 188, in optimize
+    model, losses, outputs = train_DAE(all_tok_idxs, train_size, test_size)
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/models/dae.py", line 60, in train_DAE
+    for (tok,_) in loader:
+ValueError: too many values to unpack (expected 2)
+[2022-12-30 13:20:26,072][root][ERROR] - The wandb backend process has shutdown
+Traceback (most recent call last):
+  File "scripts/black_box_opt.py", line 55, in main
+    metrics = optimizer.optimize(
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/optimizers/lambo.py", line 102, in optimize
+    self._log_candidates(pareto_candidates, pareto_targets, round_idx, log_prefix)
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/optimizers/lambo.py", line 481, in _log_candidates
+    wandb.log(record)
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/site-packages/wandb/sdk/wandb_run.py", line 1085, in log
+    self.history._row_add(data)
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/site-packages/wandb/sdk/wandb_history.py", line 44, in _row_add
+    self._flush()
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/site-packages/wandb/sdk/wandb_history.py", line 59, in _flush
+    self._callback(row=self._data, step=self._step)
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/site-packages/wandb/sdk/wandb_run.py", line 835, in _history_callback
+    self._backend.interface.publish_history(
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/site-packages/wandb/sdk/interface/interface.py", line 227, in publish_history
+    self._publish_history(history)
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/site-packages/wandb/sdk/interface/interface.py", line 211, in _publish_history
+    self._publish(rec)
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/site-packages/wandb/sdk/interface/interface.py", line 528, in _publish
+    raise Exception("The wandb backend process has shutdown")
+Exception: The wandb backend process has shutdown
+[2022-12-30 15:46:46,354][root][ERROR] - local variable 'tok' referenced before assignment
+Traceback (most recent call last):
+  File "scripts/black_box_opt.py", line 55, in main
+    metrics = optimizer.optimize(
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/optimizers/lambo.py", line 188, in optimize
+    model, losses, outputs = train_DAE(all_tok_idxs, train_size, test_size)
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/models/dae.py", line 67, in train_DAE
+    print("tok", tok)
+UnboundLocalError: local variable 'tok' referenced before assignment
+[2022-12-30 15:52:15,511][root][ERROR] - type Tensor doesn't define __round__ method
+Traceback (most recent call last):
+  File "scripts/black_box_opt.py", line 55, in main
+    metrics = optimizer.optimize(
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/optimizers/lambo.py", line 188, in optimize
+    model, losses, outputs = train_DAE(all_tok_idxs, train_size, test_size)
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/models/dae.py", line 61, in train_DAE
+    reconstructed = DAEmodel(tok)
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/models/dae.py", line 40, in forward
+    x=round(x)
+TypeError: type Tensor doesn't define __round__ method
+[2022-12-30 16:00:40,999][root][ERROR] - The size of tensor a (36) must match the size of tensor b (4) at non-singleton dimension 1
+Traceback (most recent call last):
+  File "scripts/black_box_opt.py", line 55, in main
+    metrics = optimizer.optimize(
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/optimizers/lambo.py", line 188, in optimize
+    model, losses, outputs = train_DAE(all_tok_idxs, train_size, test_size)
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/models/dae.py", line 64, in train_DAE
+    tok = (tok - mean) / std
+RuntimeError: The size of tensor a (36) must match the size of tensor b (4) at non-singleton dimension 1
+[2022-12-30 16:01:20,646][root][ERROR] - The size of tensor a (36) must match the size of tensor b (4) at non-singleton dimension 1
+Traceback (most recent call last):
+  File "scripts/black_box_opt.py", line 55, in main
+    metrics = optimizer.optimize(
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/optimizers/lambo.py", line 188, in optimize
+    model, losses, outputs = train_DAE(all_tok_idxs, train_size, test_size)
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/models/dae.py", line 64, in train_DAE
+    tok = (tok - mean) / std
+RuntimeError: The size of tensor a (36) must match the size of tensor b (4) at non-singleton dimension 1
+[2022-12-30 16:16:02,704][root][ERROR] - 'DataLoader' object is not subscriptable
+Traceback (most recent call last):
+  File "scripts/black_box_opt.py", line 55, in main
+    metrics = optimizer.optimize(
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/optimizers/lambo.py", line 188, in optimize
+    model, losses, outputs = train_DAE(all_tok_idxs, train_size, test_size)
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/models/dae.py", line 59, in train_DAE
+    tok_norm = torch.zeros_like(loader[0])
+TypeError: 'DataLoader' object is not subscriptable
+[2022-12-30 16:27:49,982][root][ERROR] - iteration over a 0-d tensor
+Traceback (most recent call last):
+  File "scripts/black_box_opt.py", line 55, in main
+    metrics = optimizer.optimize(
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/optimizers/lambo.py", line 188, in optimize
+    model, losses, outputs = train_DAE(all_tok_idxs, self.encoder.tokenizer)
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/models/dae.py", line 85, in train_DAE
+    print("reconstructed",tokens_to_str(reconstructed[0], tokenizer))
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/utils.py", line 417, in tokens_to_str
+    str_array = np.array([
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/utils.py", line 418, in <listcomp>
+    tokenizer.decode(token_ids).replace(' ', '') for token_ids in tok_idx_array
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/utils.py", line 69, in decode
+    for t_id in token_ids:
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/site-packages/torch/_tensor.py", line 642, in __iter__
+    raise TypeError('iteration over a 0-d tensor')
+TypeError: iteration over a 0-d tensor
+[2022-12-30 16:28:44,191][root][ERROR] - 
+Traceback (most recent call last):
+  File "scripts/black_box_opt.py", line 55, in main
+    metrics = optimizer.optimize(
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/optimizers/lambo.py", line 188, in optimize
+    model, losses, outputs = train_DAE(all_tok_idxs, self.encoder.tokenizer)
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/models/dae.py", line 85, in train_DAE
+    print("reconstructed",tokens_to_str(reconstructed, tokenizer))
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/utils.py", line 417, in tokens_to_str
+    str_array = np.array([
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/utils.py", line 418, in <listcomp>
+    tokenizer.decode(token_ids).replace(' ', '') for token_ids in tok_idx_array
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/utils.py", line 70, in decode
+    token = self.convert_id_to_token(t_id)
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/utils.py", line 79, in convert_id_to_token
+    assert isinstance(token_id, int)
+AssertionError
+[2022-12-30 16:29:07,127][root][ERROR] - The wandb backend process has shutdown
+Traceback (most recent call last):
+  File "scripts/black_box_opt.py", line 55, in main
+    metrics = optimizer.optimize(
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/optimizers/lambo.py", line 102, in optimize
+    self._log_candidates(pareto_candidates, pareto_targets, round_idx, log_prefix)
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/optimizers/lambo.py", line 480, in _log_candidates
+    wandb.log(record)
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/site-packages/wandb/sdk/wandb_run.py", line 1085, in log
+    self.history._row_add(data)
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/site-packages/wandb/sdk/wandb_history.py", line 44, in _row_add
+    self._flush()
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/site-packages/wandb/sdk/wandb_history.py", line 59, in _flush
+    self._callback(row=self._data, step=self._step)
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/site-packages/wandb/sdk/wandb_run.py", line 835, in _history_callback
+    self._backend.interface.publish_history(
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/site-packages/wandb/sdk/interface/interface.py", line 227, in publish_history
+    self._publish_history(history)
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/site-packages/wandb/sdk/interface/interface.py", line 211, in _publish_history
+    self._publish(rec)
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/site-packages/wandb/sdk/interface/interface.py", line 528, in _publish
+    raise Exception("The wandb backend process has shutdown")
+Exception: The wandb backend process has shutdown
+[2022-12-30 16:30:39,618][root][ERROR] - 
+Traceback (most recent call last):
+  File "scripts/black_box_opt.py", line 55, in main
+    metrics = optimizer.optimize(
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/optimizers/lambo.py", line 190, in optimize
+    model, losses, outputs = train_DAE(all_tok_idxs, self.encoder.tokenizer)
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/models/dae.py", line 86, in train_DAE
+    print("tok",tokens_to_str(tok, tokenizer))
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/utils.py", line 417, in tokens_to_str
+    str_array = np.array([
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/utils.py", line 418, in <listcomp>
+    tokenizer.decode(token_ids).replace(' ', '') for token_ids in tok_idx_array
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/utils.py", line 70, in decode
+    token = self.convert_id_to_token(t_id)
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/utils.py", line 79, in convert_id_to_token
+    assert isinstance(token_id, int)
+AssertionError
+[2022-12-30 17:17:41,137][root][ERROR] - 'tuple' object has no attribute 'shape'
+Traceback (most recent call last):
+  File "scripts/black_box_opt.py", line 55, in main
+    metrics = optimizer.optimize(
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/optimizers/lambo.py", line 184, in optimize
+    print("X_train_feats",X_train_feats.shape, "Y_train",Y_train[0])
+AttributeError: 'tuple' object has no attribute 'shape'
+[2022-12-30 17:20:59,647][root][ERROR] - Can't call numpy() on Tensor that requires grad. Use tensor.detach().numpy() instead.
+Traceback (most recent call last):
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/site-packages/numpy/core/fromnumeric.py", line 2007, in shape
+    result = a.shape
+AttributeError: 'tuple' object has no attribute 'shape'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "scripts/black_box_opt.py", line 55, in main
+    metrics = optimizer.optimize(
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/optimizers/lambo.py", line 184, in optimize
+    print("X_train_feats",np.shape(X_train_feats), "Y_train",Y_train[0])
+  File "<__array_function__ internals>", line 180, in shape
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/site-packages/numpy/core/fromnumeric.py", line 2009, in shape
+    result = asarray(a).shape
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/site-packages/torch/_tensor.py", line 678, in __array__
+    return self.numpy()
+RuntimeError: Can't call numpy() on Tensor that requires grad. Use tensor.detach().numpy() instead.
+[2022-12-30 17:22:22,100][root][ERROR] - 'tuple' object has no attribute 'detach'
+Traceback (most recent call last):
+  File "scripts/black_box_opt.py", line 55, in main
+    metrics = optimizer.optimize(
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/optimizers/lambo.py", line 184, in optimize
+    print("X_train_feats",X_train_feats.detach().numpy().shape, "Y_train",Y_train[0])
+AttributeError: 'tuple' object has no attribute 'detach'
+[2022-12-30 17:27:20,871][root][ERROR] - tuple index out of range
+Traceback (most recent call last):
+  File "scripts/black_box_opt.py", line 55, in main
+    metrics = optimizer.optimize(
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/optimizers/lambo.py", line 184, in optimize
+    print("X_train_feats",(X_train_feats[2]).shape, "Y_train",Y_train[0])
+IndexError: tuple index out of range
+[2022-12-30 17:36:52,997][root][ERROR] - The size of tensor a (2) must match the size of tensor b (3) at non-singleton dimension 1
+Traceback (most recent call last):
+  File "scripts/black_box_opt.py", line 55, in main
+    metrics = optimizer.optimize(
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/optimizers/lambo.py", line 183, in optimize
+    records = self.surrogate_model.fit(
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/models/gp_models.py", line 321, in fit
+    return fit_gp_surrogate(**fit_kwargs)
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/models/gp_utils.py", line 139, in fit_gp_surrogate
+    start_metrics = surrogate.evaluate(val_loader, split='val')
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/models/gp_models.py", line 101, in evaluate
+    f_dist = self(features)
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/site-packages/gpytorch/models/exact_gp.py", line 283, in __call__
+    self.prediction_strategy = prediction_strategy(
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/site-packages/gpytorch/models/exact_prediction_strategies.py", line 34, in prediction_strategy
+    return cls(train_inputs, train_prior_dist, train_labels, likelihood)
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/site-packages/gpytorch/kernels/kernel.py", line 352, in prediction_strategy
+    return exact_prediction_strategies.DefaultPredictionStrategy(
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/site-packages/gpytorch/models/exact_prediction_strategies.py", line 50, in __init__
+    mvn = self.likelihood(train_prior_dist, train_inputs)
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/site-packages/gpytorch/likelihoods/likelihood.py", line 65, in __call__
+    return self.marginal(input, *args, **kwargs)
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/site-packages/gpytorch/likelihoods/multitask_gaussian_likelihood.py", line 94, in marginal
+    covar = covar.evaluate_kernel()
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/site-packages/gpytorch/utils/memoize.py", line 59, in g
+    return _add_to_cache(self, cache_name, method(self, *args, **kwargs), *args, kwargs_pkl=kwargs_pkl)
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/site-packages/gpytorch/lazy/lazy_evaluated_kernel_tensor.py", line 332, in evaluate_kernel
+    res = self.kernel(
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/site-packages/gpytorch/kernels/kernel.py", line 402, in __call__
+    res = lazify(super(Kernel, self).__call__(x1_, x2_, last_dim_is_batch=last_dim_is_batch, **params))
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/site-packages/gpytorch/module.py", line 30, in __call__
+    outputs = self.forward(*inputs, **kwargs)
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/site-packages/gpytorch/kernels/multitask_kernel.py", line 50, in forward
+    covar_x = lazify(self.data_covar_module.forward(x1, x2, **params))
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/site-packages/gpytorch/kernels/matern_kernel.py", line 100, in forward
+    x1_ = (x1 - mean).div(self.lengthscale)
+RuntimeError: The size of tensor a (2) must match the size of tensor b (3) at non-singleton dimension 1
+[2022-12-31 13:42:25,281][root][ERROR] - Provided FoldX directory (/Users/kofoed/foldx) is missing either rotabase.txt or foldx.
+These files are required for FoldX to run
+Traceback (most recent call last):
+  File "scripts/black_box_opt.py", line 42, in main
+    base_candidates, base_targets, all_seqs, all_targets = bb_task.task_setup(config, project_root=project_root)
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/tasks/proxy_rfp/proxy_rfp.py", line 69, in task_setup
+    FoldedCandidate(work_dir, parent_pdb_path, [], self.tokenizer,
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/candidate.py", line 107, in __init__
+    foldx_manager = FoldxManager(wt_pdb=wild_pdb_path, work_dir=work_dir,
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/tasks/proxy_rfp/foldx.py", line 94, in __init__
+    self._check_files()
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/tasks/proxy_rfp/foldx.py", line 257, in _check_files
+    raise FileNotFoundError(
+FileNotFoundError: Provided FoldX directory (/Users/kofoed/foldx) is missing either rotabase.txt or foldx.
+These files are required for FoldX to run
+[2022-12-31 13:45:47,760][root][ERROR] - Provided FoldX directory (/Users/kofoed/foldx) is missing either rotabase.txt or foldx.
+These files are required for FoldX to run
+Traceback (most recent call last):
+  File "scripts/black_box_opt.py", line 42, in main
+    base_candidates, base_targets, all_seqs, all_targets = bb_task.task_setup(config, project_root=project_root)
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/tasks/proxy_rfp/proxy_rfp.py", line 69, in task_setup
+    FoldedCandidate(work_dir, parent_pdb_path, [], self.tokenizer,
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/candidate.py", line 107, in __init__
+    foldx_manager = FoldxManager(wt_pdb=wild_pdb_path, work_dir=work_dir,
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/tasks/proxy_rfp/foldx.py", line 94, in __init__
+    self._check_files()
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/tasks/proxy_rfp/foldx.py", line 257, in _check_files
+    raise FileNotFoundError(
+FileNotFoundError: Provided FoldX directory (/Users/kofoed/foldx) is missing either rotabase.txt or foldx.
+These files are required for FoldX to run
+[2022-12-31 13:55:32,909][root][ERROR] - Provided FoldX directory (/Users/kofoed/foldx) is missing either rotabase.txt or foldx.
+These files are required for FoldX to run
+Traceback (most recent call last):
+  File "scripts/black_box_opt.py", line 42, in main
+    base_candidates, base_targets, all_seqs, all_targets = bb_task.task_setup(config, project_root=project_root)
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/tasks/proxy_rfp/proxy_rfp.py", line 69, in task_setup
+    FoldedCandidate(work_dir, parent_pdb_path, [], self.tokenizer,
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/candidate.py", line 107, in __init__
+    foldx_manager = FoldxManager(wt_pdb=wild_pdb_path, work_dir=work_dir,
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/tasks/proxy_rfp/foldx.py", line 94, in __init__
+    self._check_files()
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/tasks/proxy_rfp/foldx.py", line 257, in _check_files
+    raise FileNotFoundError(
+FileNotFoundError: Provided FoldX directory (/Users/kofoed/foldx) is missing either rotabase.txt or foldx.
+These files are required for FoldX to run
+[2022-12-31 14:00:45,476][root][ERROR] - 'NoneType' object is not iterable
+Traceback (most recent call last):
+  File "scripts/black_box_opt.py", line 55, in main
+    metrics = optimizer.optimize(
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/optimizers/lambo.py", line 78, in optimize
+    is_feasible = self.bb_task.is_feasible(candidate_pool)
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/tasks/base_task.py", line 72, in is_feasible
+    is_feasible = np.array([len(cand) <= self.max_len for cand in candidates]).reshape(-1)
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/tasks/base_task.py", line 72, in <listcomp>
+    is_feasible = np.array([len(cand) <= self.max_len for cand in candidates]).reshape(-1)
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/candidate.py", line 150, in __len__
+    tok_idxs = self.tokenizer.encode(self.mutant_residue_seq)
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/site-packages/cachetools/__init__.py", line 641, in wrapper
+    v = func(*args, **kwargs)
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/utils.py", line 61, in encode
+    seq = ["[CLS]"] + list(seq) + ["[SEP]"]
+TypeError: 'NoneType' object is not iterable
+[2023-01-02 09:26:50,798][root][ERROR] - 'NoneType' object is not iterable
+Traceback (most recent call last):
+  File "scripts/black_box_opt.py", line 55, in main
+    metrics = optimizer.optimize(
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/optimizers/lambo.py", line 78, in optimize
+    is_feasible = self.bb_task.is_feasible(candidate_pool)
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/tasks/base_task.py", line 72, in is_feasible
+    is_feasible = np.array([len(cand) <= self.max_len for cand in candidates]).reshape(-1)
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/tasks/base_task.py", line 72, in <listcomp>
+    is_feasible = np.array([len(cand) <= self.max_len for cand in candidates]).reshape(-1)
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/candidate.py", line 150, in __len__
+    tok_idxs = self.tokenizer.encode(self.mutant_residue_seq)
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/site-packages/cachetools/__init__.py", line 641, in wrapper
+    v = func(*args, **kwargs)
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/utils.py", line 61, in encode
+    seq = ["[CLS]"] + list(seq) + ["[SEP]"]
+TypeError: 'NoneType' object is not iterable
+[2023-01-02 09:29:16,331][root][ERROR] - 'NoneType' object is not iterable
+Traceback (most recent call last):
+  File "scripts/black_box_opt.py", line 55, in main
+    metrics = optimizer.optimize(
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/optimizers/lambo.py", line 78, in optimize
+    is_feasible = self.bb_task.is_feasible(candidate_pool)
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/tasks/base_task.py", line 72, in is_feasible
+    is_feasible = np.array([len(cand) <= self.max_len for cand in candidates]).reshape(-1)
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/tasks/base_task.py", line 72, in <listcomp>
+    is_feasible = np.array([len(cand) <= self.max_len for cand in candidates]).reshape(-1)
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/candidate.py", line 150, in __len__
+    tok_idxs = self.tokenizer.encode(self.mutant_residue_seq)
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/site-packages/cachetools/__init__.py", line 641, in wrapper
+    v = func(*args, **kwargs)
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/utils.py", line 61, in encode
+    seq = ["[CLS]"] + list(seq) + ["[SEP]"]
+TypeError: 'NoneType' object is not iterable
+[2023-01-02 09:32:01,844][root][ERROR] - 'NoneType' object is not iterable
+Traceback (most recent call last):
+  File "scripts/black_box_opt.py", line 55, in main
+    metrics = optimizer.optimize(
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/optimizers/lambo.py", line 78, in optimize
+    is_feasible = self.bb_task.is_feasible(candidate_pool)
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/tasks/base_task.py", line 74, in is_feasible
+    is_feasible = np.array([len(cand) <= self.max_len for cand in candidates]).reshape(-1)
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/tasks/base_task.py", line 74, in <listcomp>
+    is_feasible = np.array([len(cand) <= self.max_len for cand in candidates]).reshape(-1)
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/candidate.py", line 150, in __len__
+    tok_idxs = self.tokenizer.encode(self.mutant_residue_seq)
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/site-packages/cachetools/__init__.py", line 641, in wrapper
+    v = func(*args, **kwargs)
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/utils.py", line 61, in encode
+    seq = ["[CLS]"] + list(seq) + ["[SEP]"]
+TypeError: 'NoneType' object is not iterable
+[2023-01-02 09:33:09,648][root][ERROR] - 'NoneType' object is not iterable
+Traceback (most recent call last):
+  File "scripts/black_box_opt.py", line 55, in main
+    metrics = optimizer.optimize(
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/optimizers/lambo.py", line 78, in optimize
+    is_feasible = self.bb_task.is_feasible(candidate_pool)
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/tasks/base_task.py", line 75, in is_feasible
+    print("len(cand)",len(cand))
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/candidate.py", line 150, in __len__
+    tok_idxs = self.tokenizer.encode(self.mutant_residue_seq)
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/site-packages/cachetools/__init__.py", line 641, in wrapper
+    v = func(*args, **kwargs)
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/utils.py", line 61, in encode
+    seq = ["[CLS]"] + list(seq) + ["[SEP]"]
+TypeError: 'NoneType' object is not iterable
+[2023-01-02 09:34:26,813][root][ERROR] - 'NoneType' object is not iterable
+Traceback (most recent call last):
+  File "scripts/black_box_opt.py", line 55, in main
+    metrics = optimizer.optimize(
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/optimizers/lambo.py", line 78, in optimize
+    is_feasible = self.bb_task.is_feasible(candidate_pool)
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/tasks/base_task.py", line 75, in is_feasible
+    print("len(cand)",len(cand))
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/candidate.py", line 153, in __len__
+    tok_idxs = self.tokenizer.encode(self.mutant_residue_seq)
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/site-packages/cachetools/__init__.py", line 641, in wrapper
+    v = func(*args, **kwargs)
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/utils.py", line 61, in encode
+    seq = ["[CLS]"] + list(seq) + ["[SEP]"]
+TypeError: 'NoneType' object is not iterable
+[2023-01-02 09:36:41,276][root][ERROR] - 'NoneType' object is not iterable
+Traceback (most recent call last):
+  File "scripts/black_box_opt.py", line 55, in main
+    metrics = optimizer.optimize(
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/optimizers/lambo.py", line 80, in optimize
+    is_feasible = self.bb_task.is_feasible(candidate_pool)
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/tasks/base_task.py", line 75, in is_feasible
+    print("len(cand)",len(cand))
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/candidate.py", line 153, in __len__
+    tok_idxs = self.tokenizer.encode(self.mutant_residue_seq)
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/site-packages/cachetools/__init__.py", line 641, in wrapper
+    v = func(*args, **kwargs)
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/utils.py", line 61, in encode
+    seq = ["[CLS]"] + list(seq) + ["[SEP]"]
+TypeError: 'NoneType' object is not iterable
+[2023-01-02 09:37:55,484][root][ERROR] - 'NoneType' object is not iterable
+Traceback (most recent call last):
+  File "scripts/black_box_opt.py", line 55, in main
+    metrics = optimizer.optimize(
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/optimizers/lambo.py", line 78, in optimize
+    is_feasible = self.bb_task.is_feasible(candidate_pool)
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/tasks/base_task.py", line 74, in is_feasible
+    print("len",len(cand))
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/candidate.py", line 153, in __len__
+    tok_idxs = self.tokenizer.encode(self.mutant_residue_seq)
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/site-packages/cachetools/__init__.py", line 641, in wrapper
+    v = func(*args, **kwargs)
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/utils.py", line 61, in encode
+    seq = ["[CLS]"] + list(seq) + ["[SEP]"]
+TypeError: 'NoneType' object is not iterable
+[2023-01-02 09:40:06,655][root][ERROR] - 'NoneType' object is not iterable
+Traceback (most recent call last):
+  File "scripts/black_box_opt.py", line 55, in main
+    metrics = optimizer.optimize(
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/optimizers/lambo.py", line 78, in optimize
+    is_feasible = self.bb_task.is_feasible(candidate_pool)
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/tasks/base_task.py", line 75, in is_feasible
+    is_feasible = np.array([len(cand) <= self.max_len for cand in candidates]).reshape(-1)
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/tasks/base_task.py", line 75, in <listcomp>
+    is_feasible = np.array([len(cand) <= self.max_len for cand in candidates]).reshape(-1)
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/candidate.py", line 153, in __len__
+    tok_idxs = self.tokenizer.encode(self.mutant_residue_seq)
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/site-packages/cachetools/__init__.py", line 641, in wrapper
+    v = func(*args, **kwargs)
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/utils.py", line 61, in encode
+    seq = ["[CLS]"] + list(seq) + ["[SEP]"]
+TypeError: 'NoneType' object is not iterable
+[2023-01-02 11:34:42,542][root][ERROR] - 'int' object is not callable
+Traceback (most recent call last):
+  File "scripts/black_box_opt.py", line 55, in main
+    metrics = optimizer.optimize(
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/optimizers/lambo.py", line 180, in optimize
+    x_encoded = self.encoder(seq)
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/models/lm_elements.py", line 31, in forward
+    return self.model(tok_idxs)
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/models/shared_elements.py", line 145, in forward
+    if src_tok_idxs.size(1) > self.max_len:
+TypeError: 'int' object is not callable
+[2023-01-02 11:35:34,257][root][ERROR] - 'str' object has no attribute 'size'
+Traceback (most recent call last):
+  File "scripts/black_box_opt.py", line 55, in main
+    metrics = optimizer.optimize(
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/optimizers/lambo.py", line 180, in optimize
+    x_encoded = self.encoder(self.tokenizer.to_smiles(seq))
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/models/lm_elements.py", line 31, in forward
+    return self.model(tok_idxs)
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/models/shared_elements.py", line 145, in forward
+    if src_tok_idxs.size(1) > self.max_len:
+AttributeError: 'str' object has no attribute 'size'
+[2023-01-02 11:51:43,755][root][ERROR] - The wandb backend process has shutdown
+Traceback (most recent call last):
+  File "scripts/black_box_opt.py", line 55, in main
+    metrics = optimizer.optimize(
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/optimizers/lambo.py", line 100, in optimize
+    self._log_candidates(pareto_candidates, pareto_targets, round_idx, log_prefix)
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/optimizers/lambo.py", line 474, in _log_candidates
+    wandb.log(record)
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/site-packages/wandb/sdk/wandb_run.py", line 1085, in log
+    self.history._row_add(data)
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/site-packages/wandb/sdk/wandb_history.py", line 44, in _row_add
+    self._flush()
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/site-packages/wandb/sdk/wandb_history.py", line 59, in _flush
+    self._callback(row=self._data, step=self._step)
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/site-packages/wandb/sdk/wandb_run.py", line 835, in _history_callback
+    self._backend.interface.publish_history(
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/site-packages/wandb/sdk/interface/interface.py", line 227, in publish_history
+    self._publish_history(history)
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/site-packages/wandb/sdk/interface/interface.py", line 211, in _publish_history
+    self._publish(rec)
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/site-packages/wandb/sdk/interface/interface.py", line 528, in _publish
+    raise Exception("The wandb backend process has shutdown")
+Exception: The wandb backend process has shutdown
+[2023-01-02 16:07:10,549][root][ERROR] - Encountered error: `invalid syntax (lambo.py, line 261)` when loading module 'lambo.optimizers.lambo.LaMBO'
+Traceback (most recent call last):
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/site-packages/hydra/_internal/utils.py", line 572, in _locate
+    import_module(mod)
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 839, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 976, in get_code
+  File "<frozen importlib._bootstrap_external>", line 906, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/optimizers/lambo.py", line 261
+    all_tok_idxs =
+                  ^
+SyntaxError: invalid syntax
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "scripts/black_box_opt.py", line 47, in main
+    optimizer = hydra.utils.instantiate(
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/site-packages/hydra/_internal/instantiate/_instantiate2.py", line 180, in instantiate
+    return instantiate_node(config, *args, recursive=_recursive_, convert=_convert_)
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/site-packages/hydra/_internal/instantiate/_instantiate2.py", line 240, in instantiate_node
+    target = _resolve_target(node.get(_Keys.TARGET))
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/site-packages/hydra/_internal/instantiate/_instantiate2.py", line 104, in _resolve_target
+    return _locate(target)
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/site-packages/hydra/_internal/utils.py", line 574, in _locate
+    raise ImportError(
+ImportError: Encountered error: `invalid syntax (lambo.py, line 261)` when loading module 'lambo.optimizers.lambo.LaMBO'
+[2023-01-02 16:08:11,778][root][ERROR] - Encountered error: `invalid syntax (lambo.py, line 261)` when loading module 'lambo.optimizers.lambo.LaMBO'
+Traceback (most recent call last):
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/site-packages/hydra/_internal/utils.py", line 572, in _locate
+    import_module(mod)
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 839, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 976, in get_code
+  File "<frozen importlib._bootstrap_external>", line 906, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/optimizers/lambo.py", line 261
+    all_tok_idxs =
+                  ^
+SyntaxError: invalid syntax
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "scripts/black_box_opt.py", line 47, in main
+    optimizer = hydra.utils.instantiate(
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/site-packages/hydra/_internal/instantiate/_instantiate2.py", line 180, in instantiate
+    return instantiate_node(config, *args, recursive=_recursive_, convert=_convert_)
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/site-packages/hydra/_internal/instantiate/_instantiate2.py", line 240, in instantiate_node
+    target = _resolve_target(node.get(_Keys.TARGET))
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/site-packages/hydra/_internal/instantiate/_instantiate2.py", line 104, in _resolve_target
+    return _locate(target)
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/site-packages/hydra/_internal/utils.py", line 574, in _locate
+    raise ImportError(
+ImportError: Encountered error: `invalid syntax (lambo.py, line 261)` when loading module 'lambo.optimizers.lambo.LaMBO'
+[2023-01-08 13:53:41,802][root][ERROR] - 'NoneType' object is not iterable
+Traceback (most recent call last):
+  File "scripts/black_box_opt.py", line 55, in main
+    metrics = optimizer.optimize(
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/optimizers/lambo.py", line 82, in optimize
+    is_feasible = self.bb_task.is_feasible(candidate_pool)
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/tasks/base_task.py", line 72, in is_feasible
+    is_feasible = np.array([len(cand) <= self.max_len for cand in candidates]).reshape(-1)
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/tasks/base_task.py", line 72, in <listcomp>
+    is_feasible = np.array([len(cand) <= self.max_len for cand in candidates]).reshape(-1)
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/candidate.py", line 153, in __len__
+    tok_idxs = self.tokenizer.encode(self.mutant_residue_seq)
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/site-packages/cachetools/__init__.py", line 641, in wrapper
+    v = func(*args, **kwargs)
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/utils.py", line 61, in encode
+    seq = ["[CLS]"] + list(seq) + ["[SEP]"]
+TypeError: 'NoneType' object is not iterable
+[2023-01-08 13:53:59,883][root][ERROR] - 'NoneType' object is not iterable
+Traceback (most recent call last):
+  File "scripts/black_box_opt.py", line 55, in main
+    metrics = optimizer.optimize(
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/optimizers/lambo.py", line 82, in optimize
+    is_feasible = self.bb_task.is_feasible(candidate_pool)
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/tasks/base_task.py", line 72, in is_feasible
+    is_feasible = np.array([len(cand) <= self.max_len for cand in candidates]).reshape(-1)
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/tasks/base_task.py", line 72, in <listcomp>
+    is_feasible = np.array([len(cand) <= self.max_len for cand in candidates]).reshape(-1)
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/candidate.py", line 153, in __len__
+    tok_idxs = self.tokenizer.encode(self.mutant_residue_seq)
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/site-packages/cachetools/__init__.py", line 641, in wrapper
+    v = func(*args, **kwargs)
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/utils.py", line 61, in encode
+    seq = ["[CLS]"] + list(seq) + ["[SEP]"]
+TypeError: 'NoneType' object is not iterable
+[2023-01-08 13:57:46,554][root][ERROR] - 'NoneType' object is not iterable
+Traceback (most recent call last):
+  File "scripts/black_box_opt.py", line 55, in main
+    metrics = optimizer.optimize(
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/optimizers/lambo.py", line 82, in optimize
+    is_feasible = self.bb_task.is_feasible(candidate_pool)
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/tasks/base_task.py", line 72, in is_feasible
+    is_feasible = np.array([len(cand) <= self.max_len for cand in candidates]).reshape(-1)
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/tasks/base_task.py", line 72, in <listcomp>
+    is_feasible = np.array([len(cand) <= self.max_len for cand in candidates]).reshape(-1)
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/candidate.py", line 153, in __len__
+    tok_idxs = self.tokenizer.encode(self.mutant_residue_seq)
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/site-packages/cachetools/__init__.py", line 641, in wrapper
+    v = func(*args, **kwargs)
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/utils.py", line 61, in encode
+    seq = ["[CLS]"] + list(seq) + ["[SEP]"]
+TypeError: 'NoneType' object is not iterable
+[2023-01-16 10:09:44,944][root][ERROR] - too many indices for tensor of dimension 2
+Traceback (most recent call last):
+  File "scripts/black_box_opt.py", line 55, in main
+    metrics = optimizer.optimize(
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/optimizers/lambo.py", line 334, in optimize
+    lat_acq_vals_grid_it = acq_fn(grid[i,:,:].unsqueeze(1))
+IndexError: too many indices for tensor of dimension 2
+[2023-01-16 10:21:32,311][root][ERROR] - too many indices for tensor of dimension 2
+Traceback (most recent call last):
+  File "scripts/black_box_opt.py", line 55, in main
+    metrics = optimizer.optimize(
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/optimizers/lambo.py", line 334, in optimize
+    lat_acq_vals_grid_it = acq_fn(grid[i,:,:].unsqueeze(1))
+IndexError: too many indices for tensor of dimension 2
+[2023-01-16 10:32:29,001][root][ERROR] - too many indices for tensor of dimension 2
+Traceback (most recent call last):
+  File "scripts/black_box_opt.py", line 55, in main
+    metrics = optimizer.optimize(
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/optimizers/lambo.py", line 334, in optimize
+    lat_acq_vals_grid_it = acq_fn(grid[i,:,:].unsqueeze(1))
+IndexError: too many indices for tensor of dimension 2
+[2023-01-16 11:25:00,939][root][ERROR] - 'NoneType' object has no attribute 'shape'
+Traceback (most recent call last):
+  File "scripts/black_box_opt.py", line 55, in main
+    metrics = optimizer.optimize(
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/optimizers/lambo.py", line 312, in optimize
+    print("tgt_tok_logits",tgt_tok_logits.shape,"tgt_mask",tgt_mask.shape,"current_features",current_features.shape,"src_mask",src_mask.shape,"lat_tok_features",lat_tok_features.shape,"tgt_lens",tgt_lens.shape)
+AttributeError: 'NoneType' object has no attribute 'shape'
+[2023-01-16 11:38:43,753][root][ERROR] - 'NoneType' object has no attribute 'shape'
+Traceback (most recent call last):
+  File "scripts/black_box_opt.py", line 55, in main
+    metrics = optimizer.optimize(
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/optimizers/lambo.py", line 317, in optimize
+    print("tgt_lens",tgt_lens.shape)
+AttributeError: 'NoneType' object has no attribute 'shape'
+[2023-01-16 12:13:19,236][root][ERROR] - 'LaMBO' object has no attribute 'decoder'
+Traceback (most recent call last):
+  File "scripts/black_box_opt.py", line 55, in main
+    metrics = optimizer.optimize(
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/optimizers/lambo.py", line 335, in optimize
+    decoded = self.decoder(grid)
+AttributeError: 'LaMBO' object has no attribute 'decoder'
+[2023-01-16 12:57:10,936][root][ERROR] - 'LanguageModel' object has no attribute 'decoder'
+Traceback (most recent call last):
+  File "scripts/black_box_opt.py", line 55, in main
+    metrics = optimizer.optimize(
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/optimizers/lambo.py", line 335, in optimize
+    decoded = self.encoder.decoder(grid)
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1177, in __getattr__
+    raise AttributeError("'{}' object has no attribute '{}'".format(
+AttributeError: 'LanguageModel' object has no attribute 'decoder'
+[2023-01-16 13:27:50,657][root][ERROR] - Sizes of tensors must match except in dimension 2. Expected size 16 but got size 100 for tensor number 1 in the list.
+Traceback (most recent call last):
+  File "scripts/black_box_opt.py", line 55, in main
+    metrics = optimizer.optimize(
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/optimizers/lambo.py", line 319, in optimize
+    decoded_logits, _ = self.encoder.logits_from_features(current_features, src_mask, grid, tgt_lens)
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/models/lm_elements.py", line 70, in logits_from_features
+    lat_tok_features, tgt_tok_features, tgt_mask, _ = self.model.dec_tok_features(
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/models/shared_elements.py", line 129, in dec_tok_features
+    src_tok_features=torch.cat([src_tok_features, lat_tok_features], dim=-1),
+RuntimeError: Sizes of tensors must match except in dimension 2. Expected size 16 but got size 100 for tensor number 1 in the list.
+[2023-01-16 13:39:08,696][root][ERROR] - Sizes of tensors must match except in dimension 2. Expected size 16 but got size 100 for tensor number 1 in the list.
+Traceback (most recent call last):
+  File "scripts/black_box_opt.py", line 55, in main
+    metrics = optimizer.optimize(
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/optimizers/lambo.py", line 320, in optimize
+    decoded_logits, _ = self.encoder.logits_from_features(current_features, src_mask, grid, tgt_lens)
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/models/lm_elements.py", line 70, in logits_from_features
+    lat_tok_features, tgt_tok_features, tgt_mask, _ = self.model.dec_tok_features(
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/models/shared_elements.py", line 129, in dec_tok_features
+    src_tok_features=torch.cat([src_tok_features, lat_tok_features], dim=-1),
+RuntimeError: Sizes of tensors must match except in dimension 2. Expected size 16 but got size 100 for tensor number 1 in the list.
+[2023-01-16 13:51:09,236][root][ERROR] - Sizes of tensors must match except in dimension 2. Expected size 56 but got size 100 for tensor number 1 in the list.
+Traceback (most recent call last):
+  File "scripts/black_box_opt.py", line 55, in main
+    metrics = optimizer.optimize(
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/optimizers/lambo.py", line 320, in optimize
+    decoded_logits, _ = self.encoder.logits_from_features(current_features, src_mask, grid, tgt_lens)
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/models/lm_elements.py", line 70, in logits_from_features
+    lat_tok_features, tgt_tok_features, tgt_mask, _ = self.model.dec_tok_features(
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/models/shared_elements.py", line 129, in dec_tok_features
+    src_tok_features=torch.cat([src_tok_features, lat_tok_features], dim=-1),
+RuntimeError: Sizes of tensors must match except in dimension 2. Expected size 56 but got size 100 for tensor number 1 in the list.
+[2023-01-16 14:04:58,514][root][ERROR] - local variable 'decoded_logits' referenced before assignment
+Traceback (most recent call last):
+  File "scripts/black_box_opt.py", line 55, in main
+    metrics = optimizer.optimize(
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/optimizers/lambo.py", line 320, in optimize
+    print("decoded",decoded_logits)
+UnboundLocalError: local variable 'decoded_logits' referenced before assignment
+[2023-01-16 15:27:48,671][root][ERROR] - Encountered error: `invalid syntax (lambo.py, line 248)` when loading module 'lambo.optimizers.lambo.LaMBO'
+Traceback (most recent call last):
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/site-packages/hydra/_internal/utils.py", line 572, in _locate
+    import_module(mod)
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 839, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 976, in get_code
+  File "<frozen importlib._bootstrap_external>", line 906, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/optimizers/lambo.py", line 248
+    for base in base_tok_idxs
+                            ^
+SyntaxError: invalid syntax
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "scripts/black_box_opt.py", line 47, in main
+    optimizer = hydra.utils.instantiate(
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/site-packages/hydra/_internal/instantiate/_instantiate2.py", line 180, in instantiate
+    return instantiate_node(config, *args, recursive=_recursive_, convert=_convert_)
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/site-packages/hydra/_internal/instantiate/_instantiate2.py", line 240, in instantiate_node
+    target = _resolve_target(node.get(_Keys.TARGET))
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/site-packages/hydra/_internal/instantiate/_instantiate2.py", line 104, in _resolve_target
+    return _locate(target)
+  File "/Users/kofoed/opt/anaconda3/envs/lambo-env/lib/python3.8/site-packages/hydra/_internal/utils.py", line 574, in _locate
+    raise ImportError(
+ImportError: Encountered error: `invalid syntax (lambo.py, line 248)` when loading module 'lambo.optimizers.lambo.LaMBO'
+[2023-01-16 16:10:52,880][root][ERROR] - Sizes of tensors must match except in dimension 2. Expected size 56 but got size 100 for tensor number 1 in the list.
+Traceback (most recent call last):
+  File "scripts/black_box_opt.py", line 55, in main
+    metrics = optimizer.optimize(
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/optimizers/lambo.py", line 325, in optimize
+    decoded_logits, _ = self.encoder.logits_from_features(current_features, src_mask, grid, tgt_lens)
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/models/lm_elements.py", line 70, in logits_from_features
+    lat_tok_features, tgt_tok_features, tgt_mask, _ = self.model.dec_tok_features(
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/models/shared_elements.py", line 129, in dec_tok_features
+    src_tok_features=torch.cat([src_tok_features, lat_tok_features], dim=-1),
+RuntimeError: Sizes of tensors must match except in dimension 2. Expected size 56 but got size 100 for tensor number 1 in the list.
+[2023-01-16 16:25:21,710][root][ERROR] - Sizes of tensors must match except in dimension 2. Expected size 56 but got size 100 for tensor number 1 in the list.
+Traceback (most recent call last):
+  File "scripts/black_box_opt.py", line 55, in main
+    metrics = optimizer.optimize(
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/optimizers/lambo.py", line 320, in optimize
+    decoded_logits, _ = self.encoder.logits_from_features(current_features, src_mask, grid, tgt_lens)
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/models/lm_elements.py", line 70, in logits_from_features
+    lat_tok_features, tgt_tok_features, tgt_mask, _ = self.model.dec_tok_features(
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/models/shared_elements.py", line 129, in dec_tok_features
+    src_tok_features=torch.cat([src_tok_features, lat_tok_features], dim=-1),
+RuntimeError: Sizes of tensors must match except in dimension 2. Expected size 56 but got size 100 for tensor number 1 in the list.
+[2023-01-16 17:00:21,340][root][ERROR] - module 'torch' has no attribute 'zers'
+Traceback (most recent call last):
+  File "scripts/black_box_opt.py", line 55, in main
+    metrics = optimizer.optimize(
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/optimizers/lambo.py", line 316, in optimize
+    pooled_features = torch.zers(100,16,2)
+AttributeError: module 'torch' has no attribute 'zers'
+[2023-01-16 17:11:02,350][root][ERROR] - index 16 is out of bounds for dimension 0 with size 16
+Traceback (most recent call last):
+  File "scripts/black_box_opt.py", line 55, in main
+    metrics = optimizer.optimize(
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/optimizers/lambo.py", line 339, in optimize
+    loss_it = -lat_acq_vals_it.mean() + self.entropy_penalty * logit_entropy[i].mean()
+IndexError: index 16 is out of bounds for dimension 0 with size 16
+[2023-01-17 09:44:35,787][root][ERROR] - expand(torch.FloatTensor{[16, 1]}, size=[56]): the number of sizes provided (1) must be greater or equal to the number of dimensions in the tensor (2)
+Traceback (most recent call last):
+  File "scripts/black_box_opt.py", line 55, in main
+    metrics = optimizer.optimize(
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/optimizers/lambo.py", line 329, in optimize
+    logit_entropy[0] = logit_entropy_it
+RuntimeError: expand(torch.FloatTensor{[16, 1]}, size=[56]): the number of sizes provided (1) must be greater or equal to the number of dimensions in the tensor (2)
+[2023-01-17 10:04:18,776][root][ERROR] - too many indices for tensor of dimension 2
+Traceback (most recent call last):
+  File "scripts/black_box_opt.py", line 55, in main
+    metrics = optimizer.optimize(
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/optimizers/lambo.py", line 330, in optimize
+    logit_entropy[0,:,:] = logit_entropy_it
+IndexError: too many indices for tensor of dimension 2
+[2023-01-17 10:36:53,857][root][ERROR] - expand(torch.FloatTensor{[16, 1]}, size=[56]): the number of sizes provided (1) must be greater or equal to the number of dimensions in the tensor (2)
+Traceback (most recent call last):
+  File "scripts/black_box_opt.py", line 55, in main
+    metrics = optimizer.optimize(
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/optimizers/lambo.py", line 344, in optimize
+    logit_entropy[i] = logit_entropy_it
+RuntimeError: expand(torch.FloatTensor{[16, 1]}, size=[56]): the number of sizes provided (1) must be greater or equal to the number of dimensions in the tensor (2)
+[2023-01-17 10:52:35,355][root][ERROR] - expand(torch.FloatTensor{[16, 1]}, size=[56]): the number of sizes provided (1) must be greater or equal to the number of dimensions in the tensor (2)
+Traceback (most recent call last):
+  File "scripts/black_box_opt.py", line 55, in main
+    metrics = optimizer.optimize(
+  File "/Users/kofoed/Documents/repos/lambo_kofoed/lambo/optimizers/lambo.py", line 345, in optimize
+    logit_entropy[i] = logit_entropy_it
+RuntimeError: expand(torch.FloatTensor{[16, 1]}, size=[56]): the number of sizes provided (1) must be greater or equal to the number of dimensions in the tensor (2)

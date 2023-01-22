@@ -20,6 +20,9 @@ from lambo.models.lanmt import corrupt_tok_idxs
 
 
 class LaMBO(object):
+    def __str__(self):
+        return str(self.__class__) + ": " + str(self.__dict__)
+
     def __init__(self, bb_task, tokenizer, encoder, surrogate, acquisition, num_rounds, num_gens,
                  lr, num_opt_steps, concentrate_pool, patience, mask_ratio, resampling_weight,
                  encoder_obj, optimize_latent, position_sampler, entropy_penalty,
@@ -242,8 +245,10 @@ class LaMBO(object):
 
                 # select token positions to mutate
                 if self.position_sampler == 'entropy_method':
+                    print("entropy")
                     mask_idxs = self.sample_mutation_window(window_mask_idxs, window_entropy)
                 elif self.position_sampler == 'uniform':
+                    print("uniform")
                     mask_idxs = np.concatenate([
                         random.choice(w_idxs) for w_idxs in window_mask_idxs.values()
                     ])
@@ -288,24 +293,36 @@ class LaMBO(object):
                             tgt_tok_logits, tgt_mask, temp=1.
                         )
                     elif self.encoder_obj == 'mlm':
-                        current_features = src_tok_features.clone()
-                        np.put_along_axis(current_features, mask_idxs[..., None], opt_params, axis=1)
-                        lat_tok_features, pooled_features = self.encoder.pool_features(current_features, src_mask)
-                        tgt_tok_logits, tgt_mask = self.encoder.logits_from_features(
-                            current_features, src_mask, lat_tok_features, tgt_lens
-                        )
-                        new_tok_idxs, logit_entropy = sample_tokens(
-                            base_tok_idxs, tgt_tok_logits, self.encoder.tokenizer, replacement=False
-                        )
-                        new_tok_idxs = np.take_along_axis(new_tok_idxs, mask_idxs, axis=1)
+                        current_features_original = src_tok_features.clone()
                         tgt_tok_idxs = src_tok_idxs.clone()
-                        np.put_along_axis(tgt_tok_idxs, mask_idxs, new_tok_idxs, axis=1)
-                        logit_entropy = np.take_along_axis(logit_entropy, mask_idxs, axis=1)
+                        loss = 1000000.00
+                        for i in range(100):
+                            current_features = current_features_original + torch.randn_like(current_features_original)
+                            np.put_along_axis(current_features, mask_idxs[..., None], opt_params, axis=1)
+                            lat_tok_features, pooled_features = self.encoder.pool_features(current_features, src_mask)
+                            tgt_tok_logits, tgt_mask = self.encoder.logits_from_features(
+                                current_features, src_mask, lat_tok_features, tgt_lens
+                            )
+                            new_tok_idxs, logit_entropy = sample_tokens(
+                                base_tok_idxs, tgt_tok_logits, self.encoder.tokenizer, replacement=False
+                            )
+                            new_tok_idxs = np.take_along_axis(new_tok_idxs, mask_idxs, axis=1)
+                            tgt_tok_idxs_it = src_tok_idxs.clone()
+                            np.put_along_axis(tgt_tok_idxs_it, mask_idxs, new_tok_idxs, axis=1)
+                            logit_entropy = np.take_along_axis(logit_entropy, mask_idxs, axis=1)
+                            lat_acq_vals = acq_fn(pooled_features.unsqueeze(0))
+                            loss_it = -lat_acq_vals.mean() + self.entropy_penalty * logit_entropy.mean()
+                            if loss_it < loss:
+                                loss = loss_it
+                                tgt_tok_idxs = tgt_tok_idxs_it
                     else:
                         raise ValueError
-
-                    lat_acq_vals = acq_fn(pooled_features.unsqueeze(0))
-                    loss = -lat_acq_vals.mean() + self.entropy_penalty * logit_entropy.mean()
+                    # for i in range(1,100):
+                    #     lat_acq_vals_it = acq_fn(pooled_features[i].unsqueeze(1))
+                    #     loss_it = -lat_acq_vals_it.mean() + self.entropy_penalty * logit_entropy[i].mean()
+                    #     if loss_it < loss:
+                    #         loss = loss_it
+                    # loss = -lat_acq_vals.mean() + self.entropy_penalty * logit_entropy.mean()              
 
                     if self.optimize_latent:
                         loss.backward()

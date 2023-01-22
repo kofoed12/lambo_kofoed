@@ -1,0 +1,96 @@
+2022-12-30 13:32:40,336 INFO    MainThread:65600 [wandb_setup.py:_flush():69] setting env: {}
+2022-12-30 13:32:40,337 WARNING MainThread:65600 [wandb_setup.py:_flush():69] could not find program at scripts/black_box_opt.py
+2022-12-30 13:32:40,337 INFO    MainThread:65600 [wandb_setup.py:_flush():69] setting login settings: {}
+2022-12-30 13:32:40,337 INFO    MainThread:65600 [wandb_init.py:_log_setup():336] Logging user logs to /Users/kofoed/Documents/repos/lambo_kofoed/data/experiments/test/wandb/run-20221230_133240-3g0rpudi/logs/debug.log
+2022-12-30 13:32:40,337 INFO    MainThread:65600 [wandb_init.py:_log_setup():337] Logging internal logs to /Users/kofoed/Documents/repos/lambo_kofoed/data/experiments/test/wandb/run-20221230_133240-3g0rpudi/logs/debug-internal.log
+2022-12-30 13:32:40,337 INFO    MainThread:65600 [wandb_init.py:init():369] calling init triggers
+2022-12-30 13:32:40,337 INFO    MainThread:65600 [wandb_init.py:init():374] wandb.init called with sweep_config: {}
+config: {'config/logger/_target_': 'upcycle.logging.DataFrameLogger', 'config/logger/log_dir': 'data/experiments/test/None/2022-12-30_13-32-39', 'config/task/_target_': 'lambo.tasks.regex.RegexTask', 'config/task/regex_list': ['(?=AV)', '(?=VC)', '(?=CA)'], 'config/task/obj_dim': 3, 'config/task/log_prefix': 'regex', 'config/task/min_len': 32, 'config/task/max_len': 36, 'config/task/num_start_examples': 512, 'config/task/batch_size': 16, 'config/task/max_num_edits': None, 'config/task/max_ngram_size': 1, 'config/task/allow_len_change': True, 'config/acquisition/_target_': 'lambo.acquisitions.ehvi.NoisyEHVI', 'config/acquisition/num_samples': 2, 'config/acquisition/batch_size': 16, 'config/encoder/_target_': 'lambo.models.lm_elements.LanguageModel', 'config/encoder/name': 'mlm_cnn', 'config/encoder/model/_target_': 'lambo.models.shared_elements.mCNN', 'config/encoder/model/tokenizer/_target_': 'lambo.utils.ResidueTokenizer', 'config/encoder/model/max_len': 36, 'config/encoder/model/embed_dim': 64, 'config/encoder/model/latent_dim': 3, 'config/encoder/model/out_dim': 16, 'config/encoder/model/kernel_size': 5, 'config/encoder/model/p': 0.0, 'config/encoder/model/layernorm': True, 'config/encoder/model/max_len_delta': 0, 'config/encoder/batch_size': 32, 'config/encoder/num_epochs': 128, 'config/encoder/patience': 32, 'config/encoder/lr': 0.001, 'config/encoder/max_shift': 0, 'config/encoder/mask_ratio': 0.125, 'config/optimizer/_target_': 'lambo.optimizers.lambo.LaMBO', 'config/optimizer/_recursive_': False, 'config/optimizer/num_rounds': 64, 'config/optimizer/num_gens': 16, 'config/optimizer/num_opt_steps': 32, 'config/optimizer/patience': 32, 'config/optimizer/lr': 0.1, 'config/optimizer/concentrate_pool': 1, 'config/optimizer/mask_ratio': 0.125, 'config/optimizer/resampling_weight': 1.0, 'config/optimizer/encoder_obj': 'mlm', 'config/optimizer/optimize_latent': True, 'config/optimizer/position_sampler': 'uniform', 'config/optimizer/entropy_penalty': 0.01, 'config/optimizer/window_size': 1, 'config/optimizer/latent_init': None, 'config/optimizer/algorithm/_target_': 'pymoo.algorithms.soo.nonconvex.ga.GA', 'config/optimizer/algorithm/pop_size': 16, 'config/optimizer/algorithm/n_offsprings': None, 'config/optimizer/algorithm/sampling/_target_': 'lambo.optimizers.sampler.BatchSampler', 'config/optimizer/algorithm/sampling/batch_size': 16, 'config/optimizer/algorithm/crossover/_target_': 'lambo.optimizers.crossover.BatchCrossover', 'config/optimizer/algorithm/crossover/prob': 0.25, 'config/optimizer/algorithm/crossover/prob_per_query': 0.25, 'config/optimizer/algorithm/mutation/_target_': 'lambo.optimizers.mutation.LocalMutation', 'config/optimizer/algorithm/mutation/prob': 1.0, 'config/optimizer/algorithm/mutation/eta': 16, 'config/optimizer/algorithm/mutation/safe_mut': False, 'config/optimizer/algorithm/eliminate_duplicates': True, 'config/tokenizer/_target_': 'lambo.utils.ResidueTokenizer', 'config/surrogate/_target_': 'lambo.models.gp_models.MultiTaskExactGP', 'config/surrogate/max_shift': 0, 'config/surrogate/mask_size': 0, 'config/surrogate/bootstrap_ratio': None, 'config/surrogate/min_num_train': 128, 'config/surrogate/task_noise_init': 0.25, 'config/surrogate/gp_lr': 0.005, 'config/surrogate/enc_lr': 0.005, 'config/surrogate/bs': 32, 'config/surrogate/eval_bs': 16, 'config/surrogate/num_epochs': 256, 'config/surrogate/holdout_ratio': 0.2, 'config/surrogate/early_stopping': True, 'config/surrogate/patience': 32, 'config/surrogate/eval_period': 2, 'config/surrogate/out_dim': 3, 'config/surrogate/feature_dim': 16, 'config/surrogate/encoder_wd': 0.0001, 'config/surrogate/rank': None, 'config/surrogate/task_covar_prior/_target_': 'gpytorch.priors.LKJCovariancePrior', 'config/surrogate/task_covar_prior/n': 3, 'config/surrogate/task_covar_prior/eta': 2.0, 'config/surrogate/task_covar_prior/sd_prior/_target_': 'gpytorch.priors.SmoothedBoxPrior', 'config/surrogate/task_covar_prior/sd_prior/a': 0.0001, 'config/surrogate/task_covar_prior/sd_prior/b': 1.0, 'config/surrogate/data_covar_module/_target_': 'gpytorch.kernels.MaternKernel', 'config/surrogate/data_covar_module/ard_num_dims': 16, 'config/surrogate/data_covar_module/lengthscale_prior/_target_': 'gpytorch.priors.NormalPrior', 'config/surrogate/data_covar_module/lengthscale_prior/loc': 0.7, 'config/surrogate/data_covar_module/lengthscale_prior/scale': 0.01, 'config/surrogate/likelihood/_target_': 'gpytorch.likelihoods.MultitaskGaussianLikelihood', 'config/surrogate/likelihood/num_tasks': 3, 'config/surrogate/likelihood/has_global_noise': False, 'config/surrogate/likelihood/noise_constraint/_target_': 'gpytorch.constraints.GreaterThan', 'config/surrogate/likelihood/noise_constraint/lower_bound': 0.0001, 'config/seed': 0, 'config/trial_id': 0, 'config/project_name': 'lambo', 'config/version': 'v0.2.1', 'config/data_dir': 'data/experiments', 'config/exp_name': 'test', 'config/job_name': None, 'config/timestamp': '2022-12-30_13-32-39', 'config/log_dir': 'data/experiments/test', 'config/wandb_mode': 'online'}
+2022-12-30 13:32:40,337 INFO    MainThread:65600 [wandb_init.py:init():418] starting backend
+2022-12-30 13:32:40,337 INFO    MainThread:65600 [backend.py:_multiprocessing_setup():69] multiprocessing start_methods=spawn,fork,forkserver, using: spawn
+2022-12-30 13:32:40,368 INFO    MainThread:65600 [backend.py:ensure_launched():123] starting backend process...
+2022-12-30 13:32:40,389 INFO    MainThread:65600 [backend.py:ensure_launched():127] started backend process with pid: 65609
+2022-12-30 13:32:40,391 INFO    MainThread:65600 [wandb_init.py:init():423] backend started and connected
+2022-12-30 13:32:40,399 INFO    MainThread:65600 [wandb_init.py:init():465] updated telemetry
+2022-12-30 13:32:40,400 INFO    MainThread:65600 [wandb_init.py:init():484] communicating current version
+2022-12-30 13:32:41,094 INFO    MainThread:65600 [wandb_init.py:init():489] got version response upgrade_message: "wandb version 0.13.7 is available!  To upgrade, please run:\n $ pip install wandb --upgrade"
+
+2022-12-30 13:32:41,094 INFO    MainThread:65600 [wandb_init.py:init():497] communicating run to backend with 30 second timeout
+2022-12-30 13:32:41,430 INFO    MainThread:65600 [wandb_init.py:init():522] starting run threads in backend
+2022-12-30 13:32:46,444 INFO    MainThread:65600 [wandb_run.py:_console_start():1554] atexit reg
+2022-12-30 13:32:46,444 INFO    MainThread:65600 [wandb_run.py:_redirect():1401] redirect: SettingsConsole.REDIRECT
+2022-12-30 13:32:46,445 INFO    MainThread:65600 [wandb_run.py:_redirect():1406] Redirecting console.
+2022-12-30 13:32:46,446 INFO    MainThread:65600 [wandb_run.py:_redirect():1468] Redirects installed.
+2022-12-30 13:32:46,446 INFO    MainThread:65600 [wandb_init.py:init():546] run started, returning control to user process
+2022-12-30 13:33:37,608 INFO    MainThread:65600 [wandb_run.py:_atexit_cleanup():1524] got exitcode: 0
+2022-12-30 13:33:37,610 INFO    MainThread:65600 [wandb_run.py:_restore():1496] restore
+2022-12-30 13:33:39,932 INFO    MainThread:65600 [wandb_run.py:_wait_for_finish():1646] got exit ret: file_counts {
+  wandb_count: 1
+}
+pusher_stats {
+  uploaded_bytes: 874
+  total_bytes: 874
+}
+
+2022-12-30 13:33:40,931 INFO    MainThread:65600 [wandb_run.py:_wait_for_finish():1646] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 874
+  total_bytes: 26904
+}
+
+2022-12-30 13:33:41,375 INFO    MainThread:65600 [wandb_run.py:_wait_for_finish():1646] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 26904
+  total_bytes: 26904
+}
+
+2022-12-30 13:33:41,482 INFO    MainThread:65600 [wandb_run.py:_wait_for_finish():1646] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 26904
+  total_bytes: 26904
+}
+
+2022-12-30 13:33:41,588 INFO    MainThread:65600 [wandb_run.py:_wait_for_finish():1646] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 26904
+  total_bytes: 26904
+}
+
+2022-12-30 13:33:41,695 INFO    MainThread:65600 [wandb_run.py:_wait_for_finish():1646] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 26904
+  total_bytes: 26904
+}
+
+2022-12-30 13:33:41,804 INFO    MainThread:65600 [wandb_run.py:_wait_for_finish():1646] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 26904
+  total_bytes: 26904
+}
+
+2022-12-30 13:33:41,914 INFO    MainThread:65600 [wandb_run.py:_wait_for_finish():1646] got exit ret: done: true
+exit_result {
+}
+file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 26904
+  total_bytes: 26904
+}
+
+2022-12-30 13:33:43,290 INFO    MainThread:65600 [wandb_run.py:_show_summary():1801] rendering summary
+2022-12-30 13:33:43,291 INFO    MainThread:65600 [wandb_run.py:_show_history():1839] rendering history
+2022-12-30 13:33:43,291 INFO    MainThread:65600 [wandb_run.py:_show_files():1868] logging synced files

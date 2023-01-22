@@ -1,0 +1,6 @@
+- optimizer=lambo
+- optimizer.encoder_obj=mlm
+- task=chem
+- tokenizer=selfies
+- surrogate=multi_task_exact_gp
+- acquisition=nehvi

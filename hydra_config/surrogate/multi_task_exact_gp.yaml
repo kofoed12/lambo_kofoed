@@ -14,7 +14,8 @@ early_stopping: True
 patience: 32
 eval_period: 2
 out_dim: ${task.obj_dim}
-feature_dim: 16
+# feature_dim: 16
+feature_dim: 2
 encoder_wd: 1e-4
 rank: null
 task_covar_prior:

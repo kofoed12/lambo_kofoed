@@ -1,0 +1,6 @@
+uuid,mutation_list,wild_total_energy,mutant_total_energy
+51d8380724a646bdbab49115c15ae758,[<lambo.utils.FoldxMutation object at 0x7fe1582508b0>],-71.4708,-71.4708
+fda55fea729f457baa584696efd39074,[<lambo.utils.FoldxMutation object at 0x7fe158250940>],-55.6143,-55.6151
+a2d0a855f8cd45f090de2825f67b84ec,[<lambo.utils.FoldxMutation object at 0x7fe1398eec70>],29.6978,29.6067
+f0f371c3c25347b9b95d891771a8a7dc,[<lambo.utils.FoldxMutation object at 0x7fe1582505e0>],-27.9617,-27.9617
+7a8b903c30644a4daaf3cf606d077039,[<lambo.utils.FoldxMutation object at 0x7fe139695e20>],-61.8757,-61.8757

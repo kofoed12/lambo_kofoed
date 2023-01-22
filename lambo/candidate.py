@@ -84,8 +84,14 @@ class StringCandidate:
         )
         return StringCandidate(**cand_kwargs)
 
+    def __str__(self):
+        return str(self.__class__) + ": " + str(self.__dict__)
+
 
 class FoldedCandidate:
+    def __str__(self):
+        return str(self.__class__) + ": " + str(self.__dict__)
+
     def __init__(self, work_dir, wild_pdb_path, mutation_list, tokenizer,
                  skip_minimization=True, chain='A', wild_name=None, dist_from_wild=0.):
         """
