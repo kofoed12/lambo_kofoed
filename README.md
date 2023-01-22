@@ -1,9 +1,14 @@
 This repo is forked from samuelstanton/lambo. See original Readme further below.
 The specific relevant changes are the following:
+
 lambo/acquisitions/monte_carlo.py --> Addition of _my_compute_qehvi function.
+
 lambo/optimizers/lambo.py --> Addition of multiple sampling of batches in optimization step, (line 295-330)
+
 lambo/Simple1D_example/acq_example.ipynb --> Relevant computations and figure creations for Apples and Oranges example
+
 lambo/Simple1D_example/example1D.ipynb --> Experiments of toy example
+
 testing.ipynb --> Testing of how the hypervolume is computed
 
 
